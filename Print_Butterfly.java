@@ -18,7 +18,7 @@ public class Print_Butterfly {
                     System.out.print(number);
                     number++;
                }
-               System.out.println();
+               System.out.println(); 
           }
      }
 }
