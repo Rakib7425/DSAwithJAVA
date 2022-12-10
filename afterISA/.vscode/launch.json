@@ -1,0 +1,63 @@
+{
+     // Use IntelliSense to learn about possible attributes.
+     // Hover to view descriptions of existing attributes.
+     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+     "version": "0.2.0",
+     "configurations": [
+          {
+               "type": "java",
+               "name": "Launch Current File",
+               "request": "launch",
+               "mainClass": "${file}"
+          },
+          {
+               "type": "java",
+               "name": "Launch Boundary_Traversal_of_Matrix",
+               "request": "launch",
+               "mainClass": "Boundary_Traversal_of_Matrix",
+               "projectName": "afterISA_1ac6ec94"
+          },
+          {
+               "type": "java",
+               "name": "Launch Divisors_of_N",
+               "request": "launch",
+               "mainClass": "Divisors_of_N",
+               "projectName": "afterISA_1ac6ec94"
+          },
+          {
+               "type": "java",
+               "name": "Launch Killing_Monstars",
+               "request": "launch",
+               "mainClass": "Killing_Monstars",
+               "projectName": "afterISA_1ac6ec94"
+          },
+          {
+               "type": "java",
+               "name": "Launch MakeAB_Equal",
+               "request": "launch",
+               "mainClass": "MakeAB_Equal",
+               "projectName": "afterISA_1ac6ec94"
+          },
+          {
+               "type": "java",
+               "name": "Launch Mentor",
+               "request": "launch",
+               "mainClass": "Mentor",
+               "projectName": "afterISA_1ac6ec94"
+          },
+          {
+               "type": "java",
+               "name": "Launch Simple_Transpose",
+               "request": "launch",
+               "mainClass": "Simple_Transpose",
+               "projectName": "afterISA_1ac6ec94"
+          },
+          {
+               "type": "java",
+               "name": "Launch mohitAndArray",
+               "request": "launch",
+               "mainClass": "mohitAndArray",
+               "projectName": "afterISA_1ac6ec94"
+          }
+     ]
+}
