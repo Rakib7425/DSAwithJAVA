@@ -1,6 +1,9 @@
 import java.util.Scanner;
 
 public class Killing_Monstars {
+     /**
+      * @param args
+      */
      public static void main(String[] args) {
           try (Scanner sc = new Scanner(System.in)) {
                int n = sc.nextInt();
