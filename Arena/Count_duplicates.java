@@ -39,8 +39,8 @@ test 1: Only 1 and 2 are repeated. Both are repeated twice. So, we print:
 1 is printed before 2 as it is smaller than 2
 */
 
-import java.util.HashMap;
-import java.util.Scanner;
+// import java.util.HashMap;
+import java.util.*;
 
 /**
  * Count_duplicates
