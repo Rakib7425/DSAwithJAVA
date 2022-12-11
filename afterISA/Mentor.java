@@ -13,9 +13,7 @@ class Mentor {
 
                for (int i = 0; i < rows; i++) {
 
-                    for (int j = 0; j < column; j++)
-
-                    {
+                    for (int j = 0; j < column; j++){
 
                          brr[i][j] = sc.nextInt();
 
@@ -28,9 +26,7 @@ class Mentor {
 
                for (int i = 0; i < rows; i++) {
 
-                    for (int j = 0; j < column; j++)
-
-                    {
+                    for (int j = 0; j < column; j++){
 
                          System.out.print(brr[i][j] + " ");
 
@@ -44,10 +40,7 @@ class Mentor {
 
                for (int i = 0; i < rows; i++) {
 
-                    for (int j = 0; j < column; j++)
-
-                    {
-
+                    for (int j = 0; j < column; j++){
                          sum = sum + brr[i][j];
 
                     }
