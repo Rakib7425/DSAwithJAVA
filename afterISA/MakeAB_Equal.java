@@ -27,12 +27,11 @@ class MakeAB_Equal {
         System.out.print(ans);
     }
     public static void main (String[] args) {
-        try (// Your code here
-     Scanner in = new Scanner(System.in)) {
+        try ( Scanner in = new Scanner(System.in)) {
           int n=in.nextInt();
              int A[]=new int[n];
              int B[]=new int[n];
-             
+
              for(int i=0;i<n;i++)
                  A[i]=in.nextInt();
 
