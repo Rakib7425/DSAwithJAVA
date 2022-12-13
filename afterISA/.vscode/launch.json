@@ -6,6 +6,20 @@
      "configurations": [
           {
                "type": "java",
+               "name": "Launch Xor_Value",
+               "request": "launch",
+               "mainClass": "Xor_Value",
+               "projectName": "afterISA_1ac6ec94"
+          },
+          {
+               "type": "java",
+               "name": "Launch Maximum_Sum",
+               "request": "launch",
+               "mainClass": "Maximum_Sum",
+               "projectName": "afterISA_1ac6ec94"
+          },
+          {
+               "type": "java",
                "name": "Launch Current File",
                "request": "launch",
                "mainClass": "${file}"
