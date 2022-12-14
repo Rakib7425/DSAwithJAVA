@@ -6,6 +6,27 @@
      "configurations": [
           {
                "type": "java",
+               "name": "Launch Logical_Search",
+               "request": "launch",
+               "mainClass": "Logical_Search",
+               "projectName": "afterISA_1ac6ec94"
+          },
+          {
+               "type": "java",
+               "name": "Launch Multiplication",
+               "request": "launch",
+               "mainClass": "Multiplication",
+               "projectName": "afterISA_1ac6ec94"
+          },
+          {
+               "type": "java",
+               "name": "Launch Help_Megha_Prime_Num",
+               "request": "launch",
+               "mainClass": "Help_Megha_Prime_Num",
+               "projectName": "afterISA_1ac6ec94"
+          },
+          {
+               "type": "java",
                "name": "Launch Xor_Value",
                "request": "launch",
                "mainClass": "Xor_Value",
