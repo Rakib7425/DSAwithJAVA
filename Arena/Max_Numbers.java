@@ -44,8 +44,11 @@ First max = 5
 Second max = 4
 Third max = 4*/
 
-import java.io.*; // for handling input/output
-import java.util.*; // contains Collections framework
+// import java.io.*; // for handling input/output
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+// import java.util.*; // contains Collections framework
 
 // don't change the name of this class
 // you can add inner classes if needed

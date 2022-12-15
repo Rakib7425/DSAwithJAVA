@@ -1,6 +1,4 @@
-package com.newtonschool;
-
-import java.util.Scanner;
+import java.util.*;
 
 public class Gcd {
 
