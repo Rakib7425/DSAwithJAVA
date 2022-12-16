@@ -6,6 +6,13 @@
      "configurations": [
           {
                "type": "java",
+               "name": "Launch Insert_Operator",
+               "request": "launch",
+               "mainClass": "Insert_Operator",
+               "projectName": "afterISA_1ac6ec94"
+          },
+          {
+               "type": "java",
                "name": "Launch Tribonacci_Number_Easy_version_Recursion",
                "request": "launch",
                "mainClass": "Tribonacci_Number_Easy_version_Recursion",
