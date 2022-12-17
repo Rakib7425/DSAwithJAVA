@@ -44,5 +44,3 @@ class Divisibility_test {
  * Sample Output:
  * Yes
  */
-
-*/
