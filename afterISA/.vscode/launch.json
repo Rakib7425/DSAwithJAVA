@@ -6,6 +6,13 @@
      "configurations": [
           {
                "type": "java",
+               "name": "Launch Test",
+               "request": "launch",
+               "mainClass": "Quiz.Test",
+               "projectName": "afterISA_1ac6ec94"
+          },
+          {
+               "type": "java",
                "name": "Launch Odd_character",
                "request": "launch",
                "mainClass": "Odd_character",

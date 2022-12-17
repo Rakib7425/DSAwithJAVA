@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Quiz</title>
+</head>
+<style>
+     .qn{
+          color: rgb(255, 23, 23);
+          font-size: 17px;
+     }
+     .answer{
+          color: rgb(94, 66, 255);
+          font-size: 17px;
+     }
+     *{
+          width: 80vw;
+          margin-left: 2vw;
+          /* align-items: center;
+          justify-content: center;
+          display: inline-block; */
+     }
+     pre{
+          font-size: 18px;
+     }
+</style>
+<body>
+     
+<pre>
+
+
+
+
+
+     Strings - Revision
+     Number of questions:
+     3 Questions
+     Test Date:
+     Dec 18, 2022
+     Your Score:
+     5/5
+
+
+
+     Question 1/3
+
+     What will be the output of following program?
+
+     public class Prg {
+     public static void main(String[] args) {
+          char [] str={'i','n','c','l','u','d','e','h','e','l','p'};
+          System.out.println(str.toString());
+     }
+     }
+
+     A) includehelp
+
+     B) Error
+
+     C) [C@19e0bfd (Memory Address) <---------------------------
+
+     D) NULL
+
+     E) 0
+
+
+     Question 2/3
+
+      Consider the following recursive implementation used to reverse a string:
+     void recursive_reverse_string(char *s, int left, int right)
+     {
+     if(left < right)
+     {
+          char tmp = s[left];
+          s[left] = s[right];
+          s[right] = tmp;
+          _________;
+     }
+     }
+
+     Which of the following lines should be inserted to complete the above code?
+
+     a) recursive_reverse_string(s, left+1, right+1)
+
+     b) recursive_reverse_string(s, left-1, right-1)
+
+     c) recursive_reverse_string(s, left+1, right-1)  <---------------------------
+
+     d) recursive_reverse_string(s, left-1, right+1)
+
+
+
+     Question 3/3
+
+     Consider the following iterative implementation used to reverse a string:
+     #include
+     #include
+     void reverse_string(char *s)
+     {
+     int len = strlen(s);
+     int i,j;
+     i=0;
+     j=len-1;
+     while(______)
+     {
+          char tmp = s[i];
+          s[i] = s[j];
+          s[j] = tmp;
+          i++;
+          j--;
+     }
+     }
+     Which of the following lines should be inserted to complete the above code?
+          a) i > j
+
+          b) i < len
+
+          c) j > 0
+
+          d) i < j  <---------------------------
+
+
+
+
+
+
+
+
+
+</pre>
+
+
+
+
+<!-- <div class="q1">
+          <h3 class="qn">Q1. What does the following piece of code do?</h3>
+          <br>for (int i = 0; i &lt; arr.length-1; i++){
+          <br> &nbsp; &nbsp;for (int j = i+1; j &lt; arr.length; j++)
+          <br> &nbsp; &nbsp;{
+          <br> &nbsp; &nbsp; &nbsp; &nbsp;if( (arr[i].equals(arr[j])) &amp;&amp; (i != j) )
+          <br> &nbsp; &nbsp; &nbsp; &nbsp;{
+          <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;System.out.println(arr[i]);
+          <br> &nbsp; &nbsp; &nbsp; &nbsp;}
+          <br> &nbsp; &nbsp;}
+          <br>}
+          <h4 class="answer">Ans: Print the duplicates elementsof the array"</h4>
+     </div>
+     <div class="q2">
+          <div class="qn">Q2. Given an array arr = {5, 6, 77, 88, 99} and key = 88; How many iterations are done until the element is found?</div>
+          <h4 class="answer">Ans: D: 2 </h4>
+     </div>
+     <div class="q3">
+          <div class="qn question-text">Q3. Is the space consumed by the linear search(recursive) and linear search(iterative) same?</div>
+          <h4 class="answer">Ans: No, recursive algorithm consumes more space </h4>
+
+     </div>
+     <div class="q4">
+          <div class="qn  question-text">Q4. Which of the following false about Jump Search?</div>
+     </div> -->
+
+
+
+
+
+
+
+
+
+
+
+     <!-- <div class="col-12 question-text">Consider the following iterative implementation used to reverse a string:
+          <br>#include<stdio.h>
+          <br>#include<string.h>
+          <br>void reverse_string(char *s)
+          <br>{
+          <br> &nbsp; &nbsp; int len = strlen(s);
+          <br> &nbsp; &nbsp; int i,j;
+          <br> &nbsp; &nbsp; i=0;
+          <br> &nbsp; &nbsp; j=len-1;
+          <br> &nbsp; &nbsp; while(______)
+          <br> &nbsp; &nbsp; {
+          <br> &nbsp; &nbsp; &nbsp; &nbsp; char tmp = s[i];
+          <br> &nbsp; &nbsp; &nbsp; &nbsp; s[i] = s[j];
+          <br> &nbsp; &nbsp; &nbsp; &nbsp; s[j] = tmp;
+          <br> &nbsp; &nbsp; &nbsp; &nbsp; i++;
+          <br> &nbsp; &nbsp; &nbsp; &nbsp; j--;
+          <br> &nbsp; &nbsp; }
+          <br>}
+          <br>Which of the following lines should be inserted to complete the above code?</string.h></stdio.h></div> // ans (i<j)
+
+
+
+          <div class="col-12 question-text">Consider the following recursive implementation used to reverse a string:
+               <br>void recursive_reverse_string(char *s, int left, int right)
+               <br>{
+               <br> &nbsp; &nbsp; if(left &lt; right)
+               <br> &nbsp; &nbsp; {
+               <br> &nbsp; &nbsp; &nbsp; &nbsp; char tmp = s[left];
+               <br> &nbsp; &nbsp; &nbsp; &nbsp; s[left] = s[right];
+               <br> &nbsp; &nbsp; &nbsp; &nbsp; s[right] = tmp;
+               <br> &nbsp; &nbsp; &nbsp; &nbsp; _________;
+               <br> &nbsp; &nbsp; }
+               <br>}
+               <br>Which of the following lines should be inserted to complete the above code?</div>
+              Ans c) recursive_reverse_string(s, left+1, right-1)
+
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br> -->
+
+</body>
+</html>
