@@ -4,30 +4,36 @@ public class Maximum_and_Minimum_in_an_Array {
      public static void main(String[] args) {
           try (Scanner sc = new Scanner(System.in)) {
 
-               int T=sc.nextInt();
+               int T = sc.nextInt();
 
-               int n = sc.nextInt();
-               int arr2[] = new int[n];
-               int max = arr2[0];
-               int min = arr2[0];
+               // int arr2[] = new int[n];
 
-               while (T-->0) {
-                int arr[] = new int[n];
+               while (T > 0) {
+                    int n = sc.nextInt();
+                    int arr[] = new int[n];
 
                     for (int i = 0; i < arr.length; i++) {
                          arr[i] = sc.nextInt();
                     }
+                    int max = arr[0];
 
-                    for (int i = 0; i < n; i++) {
+                    for (int i = 1; i < arr.length; i++) {
                          max = Math.max(max, arr[i]);
                     }
+                    System.out.print(max + " ");
 
-                    for (int i = 0; i < n; i++) {
-                         min = Math.min(max, arr[i]);
+                    int min = arr[0];
+                    for (int i = 0; i < arr.length; i++) {
+                         min = Math.min(min, arr[i]);
                     }
+
+                    // System.out.print("\n");
+                    System.out.print(min + " ");
+
+                    T--;
+
+                    System.out.print("\n");
                }
-               System.out.print(max + " ");
-               System.out.print(min);
           }
      }
 }
