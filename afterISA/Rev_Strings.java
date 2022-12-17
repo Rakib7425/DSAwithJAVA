@@ -6,7 +6,7 @@ import java.util.*; // contains Collections framework
 // you can add inner classes if needed
 class Main {
     public static void main(String[] args) {
-        try ( Scanner sc = new Scanner(System.in)) {
+        try (Scanner sc = new Scanner(System.in)) {
             String rev = "";
             String str = sc.nextLine();
             for (int i = str.length() - 1; i >= 0; i--) {
