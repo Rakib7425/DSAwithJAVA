@@ -1,7 +1,7 @@
 
 // this program is for finding the count of each character
 //importing the required packages
-import java.io.*;
+// import java.io.*;
 import java.util.*;
 
 // A class CountOOfChar1 is created
