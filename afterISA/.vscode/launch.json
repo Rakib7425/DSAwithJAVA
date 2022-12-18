@@ -6,6 +6,13 @@
      "configurations": [
           {
                "type": "java",
+               "name": "Launch Repeated_characters_and_their_count",
+               "request": "launch",
+               "mainClass": "Repeated_characters_and_their_count",
+               "projectName": "afterISA_1ac6ec94"
+          },
+          {
+               "type": "java",
                "name": "Launch Test",
                "request": "launch",
                "mainClass": "Quiz.Test",
