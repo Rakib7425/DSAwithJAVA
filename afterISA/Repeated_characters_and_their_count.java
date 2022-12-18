@@ -8,11 +8,13 @@ import java.util.*;
 public class Repeated_characters_and_their_count {
      static final int MAX_CHAR = 256;
 
-     static void getOccuringChars(String st) {
+     static void getOccuringChars(int length, String st) {
           // an array was created with the size of 256 ( Ascii values)
           int counts[] = new int[MAX_CHAR];
           // a variable for finding the length of the String given as input
-          int length = st.length();
+           length = st.length();
+          // int length = st.length();
+          
           // the index value of the count array is initialized
           for (int i = 0; i < length; i++)
                counts[st.charAt(i)]++;
@@ -28,18 +30,25 @@ public class Repeated_characters_and_their_count {
                }
                if (finds == 1)
                     // display the character count
-                    System.out.println(st.charAt(i) + " " + counts[st.charAt(i)]);
+                    if (counts[st.charAt(i)] > 1) {
+                         
+                         System.out.println(st.charAt(i) + " " + counts[st.charAt(i)]);
+                    }
           }
      }
 
      // main section of the program
      public static void main(String args[]) {
           try (Scanner sc = new Scanner(System.in)) {
-               String n = sc.nextLine();
+
+               int n = sc.nextInt();
                // String st = "banana"; // a string
-               String st = new String(n);
+                    // String st = new String();
+               
+               String str = sc.nextLine();
+               
                // function calling
-               getOccuringChars(st);
+               getOccuringChars(n,str);
                
           }
      }
