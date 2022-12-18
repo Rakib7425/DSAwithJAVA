@@ -34,10 +34,14 @@ public class Repeated_characters_and_their_count {
 
      // main section of the program
      public static void main(String args[]) {
-
-          String st = "Preciouspeoplearedangerious"; // a string
-          // function calling
-          getOccuringChars(st);
+          try (Scanner sc = new Scanner(System.in)) {
+               String n = sc.nextLine();
+               // String st = "banana"; // a string
+               String st = new String(n);
+               // function calling
+               getOccuringChars(st);
+               
+          }
      }
 }
 
