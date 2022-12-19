@@ -39,12 +39,8 @@ public class Repeated_characters_and_their_count {
 
      // main section of the program
      public static void main(String args[]) {
-          
           try (Scanner sc = new Scanner(System.in)) {
-
-
                int n = sc.nextInt();
-
                String str = sc.next();
                // char ch[] = new char[n];
                // String st = "banana"; // a string
@@ -72,8 +68,9 @@ public class Repeated_characters_and_their_count {
  * Time Limit: 2 sec
  * Memory Limit: 128000 kB
  * Problem Statement
- ! Given a string s of length n. Find all the repeating characters and count
- ! their occurrence. A character is a repeating character if it occurs more than
+ * ! Given a string s of length n. Find all the repeating characters and count
+ * ! their occurrence. A character is a repeating character if it occurs more
+ * than
  * once.
  * Input
  * First line contains n.
