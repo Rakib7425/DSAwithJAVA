@@ -12,7 +12,7 @@ public class Repeated_characters_and_their_count {
           // an array was created with the size of 256 ( Ascii values)
           int counts[] = new int[MAX_CHAR];
           // a variable for finding the length of the String given as input
-          length = st.length();
+          // length = st.length();
           // int length = st.length();
 
           // the index value of the count array is initialized
@@ -42,10 +42,14 @@ public class Repeated_characters_and_their_count {
           try (Scanner sc = new Scanner(System.in)) {
                int n = sc.nextInt();
                String str = sc.next();
-
+               // char ch[] = new char[n];
                // String st = "banana"; // a string
                // String st = new String();
 
+               // for (int index = 0; index < n; index++) {
+               // ch[index]=sc.nextLine().charAt(0);
+               // }
+               // System.out.println(ch);
                // function calling
                getOccuringChars(str, n);
           }
