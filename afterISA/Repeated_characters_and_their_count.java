@@ -9,18 +9,19 @@ public class Repeated_characters_and_their_count {
      static final int MAX_CHAR = 256;
 
      static void getOccuringChars(String st, int length) {
-          // an array was created with the size of 256 ( Ascii values)
+          // *an array was created with the size of 256 ( Ascii values)
           int counts[] = new int[MAX_CHAR];
           // a variable for finding the length of the String given as input
           // length = st.length();
           // int length = st.length();
 
-          // the index value of the count array is initialized
+          // *the index value of the count array is initialized
           for (int i = 0; i < length; i++)
                counts[st.charAt(i)]++;
-          // an array which has the size as the length of the String is created
+          // *an array which has the size as the length of the String is created
           char cha[] = new char[st.length()];
-          for (int i = 0; i < length; i++) {
+          // for (int i = length; i > 1 ; i--) {
+               for (int i = 0; i < length; i++) {
                cha[i] = st.charAt(i);
                int finds = 0;
                for (int j = 0; j <= i; j++) {
@@ -29,7 +30,7 @@ public class Repeated_characters_and_their_count {
                          finds++;
                }
                if (finds == 1)
-                    // display the character count
+                    // *display the character count
                     if (counts[st.charAt(i)] > 1) {
 
                          System.out.println(st.charAt(i) + " " + counts[st.charAt(i)]);
@@ -68,10 +69,11 @@ public class Repeated_characters_and_their_count {
  * Time Limit: 2 sec
  * Memory Limit: 128000 kB
  * Problem Statement
- * ! Given a string s of length n. Find all the repeating characters and count
- * ! their occurrence. A character is a repeating character if it occurs more
- * than
- * once.
+ * 
+ ! Given a string s of length n. Find all the repeating characters and count
+ ! their occurrence. A character is a repeating character if it occurs more
+ ! than once.
+ * 
  * Input
  * First line contains n.
  * Next line contains the string s.
