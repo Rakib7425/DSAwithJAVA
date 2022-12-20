@@ -6,6 +6,20 @@
      "configurations": [
           {
                "type": "java",
+               "name": "Launch Find_Position_of_X_in_Array",
+               "request": "launch",
+               "mainClass": "Find_Position_of_X_in_Array",
+               "projectName": "afterISA_1ac6ec94"
+          },
+          {
+               "type": "java",
+               "name": "Launch AB_String",
+               "request": "launch",
+               "mainClass": "AB_String",
+               "projectName": "afterISA_1ac6ec94"
+          },
+          {
+               "type": "java",
                "name": "Launch Repeated_characters_and_their_count",
                "request": "launch",
                "mainClass": "Repeated_characters_and_their_count",
