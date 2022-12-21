@@ -21,6 +21,7 @@ public class Find_Position_of_X_in_Array {
           try (Scanner sc = new Scanner(System.in)) {
 
                int T = sc.nextInt();
+               
 
                while (T-- > 0) {
                     int N = sc.nextInt();
@@ -31,13 +32,13 @@ public class Find_Position_of_X_in_Array {
                          arr[i] = sc.nextInt();
 
                     }
-                    findElem(arr, X);
+                     findElem(arr, X);
                     System.out.print("\n");
-
+                     
                     // if (elem == -1) {
-                    // System.out.println("Not found");
+                    //      System.out.println("Not found");
                     // } else {
-                    // System.out.println(elem + " ");
+                    //      System.out.println(elem + " ");
                     // }
 
                }
