@@ -2,39 +2,43 @@ import java.util.Scanner;
 
 public class Find_Position_of_X_in_Array {
 
-     public static int findElem(int[] arr, int x) {
+     public static void findElem(int[] arr, int x) {
+          boolean flag = false;
           for (int i = 0; i < arr.length; i++) {
-               if (i == x) {
-                    // System.out.print(x + " ");
-                    return x;
+               if (arr[i] == x) {
+                    System.out.print(i + " ");
+                    // return a;
+                    flag = true;
                }
-
           }
-          return -1;
-
+          if (flag == false) {
+               System.out.print("Not found");
+          }
+          // return -1;
      }
 
      public static void main(String[] args) {
           try (Scanner sc = new Scanner(System.in)) {
 
                int T = sc.nextInt();
-               int N = sc.nextInt();
-               int X = sc.nextInt();
-               int arr[] = new int[N];
 
                while (T-- > 0) {
-
-                    for (int i = 0; i < N; i++) {
+                    int N = sc.nextInt();
+                    int X = sc.nextInt();
+                    int arr[] = new int[N];
+                    // int n = sc.nextInt();
+                    for (int i = 0; i < arr.length; i++) {
                          arr[i] = sc.nextInt();
 
                     }
+                    findElem(arr, X);
+                    System.out.print("\n");
 
-                    int elem = findElem(arr, X);
-                    if (elem == -1) {
-                         System.out.println("Not found");
-                    } else {
-                         System.out.println(elem + " ");
-                    }
+                    // if (elem == -1) {
+                    // System.out.println("Not found");
+                    // } else {
+                    // System.out.println(elem + " ");
+                    // }
 
                }
 

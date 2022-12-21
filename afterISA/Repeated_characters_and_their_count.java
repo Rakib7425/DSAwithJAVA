@@ -12,11 +12,6 @@ public class Repeated_characters_and_their_count {
 
      public static void main(String[] args) {
 
-          // InputStream inputStream = System.in;
-          // OutputStream outputStream = System.out;
-          // InputReader in = new InputReader(inputStream);
-          // InputStreamReader in = new InputStreamReader(inputStream);
-          
           try (Scanner in = new Scanner(System.in)) {
                int n = Integer.parseInt(in.next());
                String s = in.next();
