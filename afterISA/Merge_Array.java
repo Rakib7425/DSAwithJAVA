@@ -32,3 +32,33 @@ public class Merge_Array {
           }
      }
 }
+
+/*
+ * 
+ * Merge array
+ * medium
+ * asked in interviews by 6 companies
+ * Time Limit: 2 sec
+ * Memory Limit: 128000 kB
+ * Problem Statement
+ * Given two sorted array your task is to merge these two arrays into a single
+ * array such that the merged array is also sorted
+ * Input
+ * First line contain two integers N and M the size of arrays
+ * Second line contains N separated integers the elements of first array
+ * Third line contains M separated integers elements of second array
+ * 
+ * Constraints:-
+ * 1<=N,M<=104
+ * 1<=arr1[], arr2[] <=105
+ * Output
+ * Output the merged array
+ * Example
+ * Sample Input:-
+ * 3 4
+ * 1 4 7
+ * 1 3 3 9
+ * 
+ * Sample Output:-
+ * 1 1 3 3 4 7 9
+ */
