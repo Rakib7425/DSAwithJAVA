@@ -6,6 +6,20 @@
      "configurations": [
           {
                "type": "java",
+               "name": "Launch Merge_Array",
+               "request": "launch",
+               "mainClass": "Merge_Array",
+               "projectName": "afterISA_1ac6ec94"
+          },
+          {
+               "type": "java",
+               "name": "Launch D_Triplets",
+               "request": "launch",
+               "mainClass": "D_Triplets",
+               "projectName": "afterISA_1ac6ec94"
+          },
+          {
+               "type": "java",
                "name": "Launch Check_if_array_is_sorted_and_rotated_clockwise",
                "request": "launch",
                "mainClass": "Check_if_array_is_sorted_and_rotated_clockwise",

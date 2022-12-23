@@ -29,10 +29,7 @@ public class Repeated_characters_and_their_count {
                          System.out.println((char) ('a' + i) + " " + a[i]);
                     }
                }
-          } catch (NumberFormatException e) {
-               // TODO Auto-generated catch block
-               e.printStackTrace();
-          }
+          } 
 
           System.out.close();
      }

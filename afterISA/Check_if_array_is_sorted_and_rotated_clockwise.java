@@ -15,7 +15,7 @@ public class Check_if_array_is_sorted_and_rotated_clockwise {
                     for (int i = 0; i < n; i++) {
                          arr[i] = sc.nextInt();
                     }
-                    
+
                }
           }
      }

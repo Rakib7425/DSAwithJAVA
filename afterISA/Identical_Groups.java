@@ -16,8 +16,8 @@ class Identical_Groups {
 		try (Scanner sc = new Scanner(System.in)) {
 			int xRed = sc.nextInt();
 			int yBlue = sc.nextInt();
-			int min = xRed > yBlue ? yBlue : xRed;
-			int count = 0;
+			// int min = xRed > yBlue ? yBlue : xRed;
+			// int count = 0;
 
 			System.out.println(gcd(xRed, yBlue));
 		}

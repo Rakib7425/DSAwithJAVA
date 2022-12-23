@@ -3,7 +3,7 @@ import java.util.*; // contains Collections framework
 
 // don't change the name of this class
 // you can add inner classes if needed
-class Main {
+class AB_String {
      public static void main(String[] args) {
           try (Scanner sc = new Scanner(System.in)) {
                int n = Integer.parseInt(sc.next());
@@ -29,9 +29,6 @@ class Main {
                     System.out.print("NO");
                } else
                     System.out.print("YES");
-          } catch (NumberFormatException e) {
-               // TODO Auto-generated catch block
-               e.printStackTrace();
           }
           System.out.close();
      }
