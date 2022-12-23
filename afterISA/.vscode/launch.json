@@ -6,6 +6,13 @@
      "configurations": [
           {
                "type": "java",
+               "name": "Launch Check_if_array_is_sorted_and_rotated_clockwise",
+               "request": "launch",
+               "mainClass": "Check_if_array_is_sorted_and_rotated_clockwise",
+               "projectName": "afterISA_1ac6ec94"
+          },
+          {
+               "type": "java",
                "name": "Launch Find_Position_of_X_in_Array",
                "request": "launch",
                "mainClass": "Find_Position_of_X_in_Array",
