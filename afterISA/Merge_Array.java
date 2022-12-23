@@ -10,15 +10,14 @@ public class Merge_Array {
                int a[] = new int[n];
                int b[] = new int[m];
 
-                    for (int i = 0; i < n; i++) {
-                         a[i] = sc.nextInt();
-                    }
-               
-                    for (int j = 0; j < m; j++) {
-                         b[j] = sc.nextInt();
-                    }
-               
-               
+               for (int i = 0; i < n; i++) {
+                    a[i] = sc.nextInt();
+               }
+
+               for (int j = 0; j < m; j++) {
+                    b[j] = sc.nextInt();
+               }
+
                int res[] = new int[(n + m)];
 
                System.arraycopy(a, 0, res, 0, n);
