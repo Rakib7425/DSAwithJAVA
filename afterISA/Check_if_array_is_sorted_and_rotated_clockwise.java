@@ -1,9 +1,57 @@
-import java.util.Scanner;
+// Check_if_array_is_sorted_and_rotated_clockwise
+// import java.io.*; // for handling input/output
+import java.util.*; // contains Collections framework
+// don't change the name of this class
+// you can add inner classes if needed
 
-/**
- * Check_if_array_is_sorted_and_rotated_clockwise
- */
 public class Check_if_array_is_sorted_and_rotated_clockwise {
+     public static boolean sortedRotatedArrayInc(int arr[], int N) {
+          int dipIndex = -1;
+          for (int i = 0; i < N - 1; i++) {
+               if (arr[i] > arr[i + 1]) {
+                    dipIndex = i + 1;
+                    break;
+               }
+          }
+          if (dipIndex == -1) {
+               return false;
+          }
+          for (int i = dipIndex; i < N - 1; i++) {
+               if (arr[i] > arr[i + 1]) {
+                    return false;
+               }
+          }
+          if (arr[N - 1] < arr[0]) {
+               return true;
+          } else {
+               return false;
+          }
+
+     }
+
+     public static boolean sortedRotatedArrayDec(int arr[], int N) {
+          int dipIndex = -1;
+          for (int i = 0; i < N - 1; i++) {
+               if (arr[i] < arr[i + 1]) {
+                    dipIndex = i + 1;
+                    break;
+               }
+          }
+          if (dipIndex == -1) {
+               return false;
+          }
+          for (int i = dipIndex; i < N - 1; i++) {
+               if (arr[i] < arr[i + 1]) {
+                    return false;
+               }
+          }
+          if (arr[N - 1] > arr[0]) {
+               return true;
+          } else {
+               return false;
+          }
+
+     }
 
      public static void main(String[] args) {
           try (Scanner sc = new Scanner(System.in)) {
@@ -15,12 +63,19 @@ public class Check_if_array_is_sorted_and_rotated_clockwise {
                     for (int i = 0; i < n; i++) {
                          arr[i] = sc.nextInt();
                     }
+                    if (sortedRotatedArrayInc(arr, n) || sortedRotatedArrayDec(arr, n)) {
+                         System.out.println("Yes");
+                    } else {
+                         System.out.println("No");
+                    }
 
                }
           }
      }
 }
+
 /*
+ * 
  * Check if array is sorted and rotated clockwise
  * easy
  * Time Limit: 2 sec
@@ -62,62 +117,4 @@ public class Check_if_array_is_sorted_and_rotated_clockwise {
  * Explanation:
  * Testcase 1: The array is sorted (1, 2, 3, 4) and rotated twice (3, 4, 1, 2).
  * Testcase 2: The array is sorted (3, 2, 1) and rotated once (1, 3, 2).
- */
-
-// Try
-/*
- * import java.util.Scanner;
- * 
- * 
- * // Check_if_array_is_sorted_and_rotated_clockwise
- * 
- * public class Check_if_array_is_sorted_and_rotated_clockwise {
- * public static boolean isSorted(int[] a) {
- * // base case
- * if (a == null || a.length <= 1) {
- * return true;
- * }
- * 
- * for (int i = 0; i < a.length - 1; i++) {
- * if (a[i] > a[i + 1]) {
- * return false;
- * }
- * }
- * 
- * return true;
- * }
- * 
- * static int[] reverse(int a[], int n) {
- * int[] b = new int[n];
- * int j = n;
- * for (int i = 0; i < n; i++) {
- * b[j - 1] = a[i];
- * j = j - 1;
- * }
- * return a;
- * }
- * 
- * public static void main(String[] args) {
- * try (Scanner sc = new Scanner(System.in)) {
- * int T = sc.nextInt();
- * 
- * while (T-- > 0) {
- * int n = sc.nextInt();
- * int[] arr = new int[n];
- * for (int i = 0; i < arr.length; i++) {
- * arr[i] = sc.nextInt();
- * }
- * int arrRev[] = reverse(arr,n);
- * if (isSorted(arr) || arrRev != null) {
- * System.out.println("Yes");
- * } else {
- * System.out.println("No");
- * 
- * }
- * }
- * }
- * 
- * }
- * 
- * }
  */
