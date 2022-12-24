@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 
 // don't change the name of this class
 // you can add inner classes if needed
-class Main {
+class Max_Numbers {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
