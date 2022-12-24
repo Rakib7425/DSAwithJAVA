@@ -24,7 +24,7 @@ public class Queens_Attack {
 
 
 
-
+// not imp.
   public static void main(String[] args) {
     
   }
