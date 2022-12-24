@@ -5,8 +5,7 @@ import java.util.*; // contains Collections framework
 // you can add inner classes if needed
 class Mohan_And_His_Hostel_Rooms {
     public static void main(String[] args) {
-        // Your code here
-
+        
         try (Scanner sc = new Scanner(System.in)) {
             int T = sc.nextInt();
 
