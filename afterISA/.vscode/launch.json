@@ -6,6 +6,34 @@
      "configurations": [
           {
                "type": "java",
+               "name": "Launch Insertion_Sort",
+               "request": "launch",
+               "mainClass": "Insertion_Sort",
+               "projectName": "afterISA_1ac6ec94"
+          },
+          {
+               "type": "java",
+               "name": "Launch Minimum_Absolute_Difference",
+               "request": "launch",
+               "mainClass": "Minimum_Absolute_Difference",
+               "projectName": "afterISA_1ac6ec94"
+          },
+          {
+               "type": "java",
+               "name": "Launch Median_Of_Two_Sorted_Array",
+               "request": "launch",
+               "mainClass": "Median_Of_Two_Sorted_Array",
+               "projectName": "afterISA_1ac6ec94"
+          },
+          {
+               "type": "java",
+               "name": "Launch Find_it",
+               "request": "launch",
+               "mainClass": "Find_it",
+               "projectName": "afterISA_1ac6ec94"
+          },
+          {
+               "type": "java",
                "name": "Launch Merge_Array",
                "request": "launch",
                "mainClass": "Merge_Array",

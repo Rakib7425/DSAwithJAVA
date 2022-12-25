@@ -19,7 +19,7 @@ public class Electricity_bill {
                } else if (units > 250) {
                     billToPay = 100 * 1.20 + 200 * 2 + (units - 250) * 3;
                }
-               System.out.println(billToPay);
+               System.out.println(((billToPay)*20)/100);
           }
      }
 }
