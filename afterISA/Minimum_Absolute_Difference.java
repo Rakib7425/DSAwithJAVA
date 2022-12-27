@@ -3,6 +3,7 @@
 import java.util.*; // contains Collections framework
 
 public class Minimum_Absolute_Difference {
+     
      public static void main(String[] args) {
           // Main Method is here
           try (Scanner sc = new Scanner(System.in)) {
@@ -17,9 +18,10 @@ public class Minimum_Absolute_Difference {
                     arrB[indexB] = sc.nextInt();
                }
 
+
           }
      }
-}
+} 
 
 /*
  ? Minimum Absolute Difference

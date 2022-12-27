@@ -23,7 +23,7 @@ public class Find_it {
                     System.out.println(-1);
                }
           } catch (NumberFormatException e) {
-               // TODO Auto-generated catch block
+               // * Auto-generated catch block
                e.printStackTrace();
           }
      }
