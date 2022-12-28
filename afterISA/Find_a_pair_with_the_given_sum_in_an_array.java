@@ -1,10 +1,10 @@
+
 // import java.io.*; // for handling input/output
 import java.util.*; // contains Collections framework
 
-public class Number_of_Merge {
+public class Find_a_pair_with_the_given_sum_in_an_array {
 
- 
-     static int mergeCount = 0;
+     public static int count = 0;
 
      public static void mergeArr(int[] arr, int left, int mid, int right) {
           int n1 = mid - left + 1;
@@ -26,9 +26,12 @@ public class Number_of_Merge {
                if (L[i] <= R[j]) {
                     arr[k] = L[i];
                     i++;
+
                } else {
+                    count = count + (n1 - i);
                     arr[k] = R[j];
                     j++;
+
                }
                k++;
           }
@@ -52,7 +55,6 @@ public class Number_of_Merge {
                mergeSort(arr, left, mid);
                mergeSort(arr, mid + 1, right);
                mergeArr(arr, left, mid, right);
-               mergeCount++;
           }
      }
 
@@ -68,36 +70,48 @@ public class Number_of_Merge {
 
                mergeSort(arr, 0, arr.length - 1);
 
-               for (int i : arr) {
-                    System.out.print(i + " ");
-               }
-               System.out.printf("\n" + mergeCount);
+               System.out.print(count);
 
           }
      }
 }
 
-
 /*
- * Number of Merge
-easy
-Time Limit: 2 sec
-Memory Limit: 128000 kB
-Problem Statement
-You are given an unsorted array of length n and must sort it using merge sort while also printing the amount of merges that occur throughout the sorting process.
-Input
-The first line of input will be n, which represents the array's length, followed by the n array items in the second line.
-
-Constraints:
-0<= n <=100000
-Output
-First- line should be the sorted array and the second should be the number of mergers that occurs when the array is sorted using merge sort.
-Example
-Sample Input:
-5
-5 1 2 7 3
-
-Output:
-1 2 3 5 7
-4
+ * 
+ * Find a pair with the given sum in an array
+ * medium
+ * Time Limit: 2 sec
+ * Memory Limit: 128000 kB
+ * Problem Statement
+ * Given an unsorted integer array having distinct integers, find a pair with
+ * the given sum in it.
+ * First element of pair > second element of pair
+ * Input
+ * First line of input contains a single integer N, next line contains N space
+ * separated integers depicting the values of array and third line consist
+ * target sum.
+ * 
+ * Constraints:
+ * 2<=N<=5*(10^5)
+ * 1<=A[i], target<=2*(10^9)
+ * Target
+ * Output
+ * Print the pair of integers which sum is target.
+ * Example
+ * Sample Input1:-
+ * 6
+ * 8 7 4 5 3 1
+ * 10
+ * 
+ * Sample Output:-
+ * Pair found (7, 3)
+ * 
+ * 
+ * Sample Input2:
+ * 6
+ * 5 2 6 8 1 9
+ * 12
+ * 
+ * Sample Output:
+ * Pair not found
  */

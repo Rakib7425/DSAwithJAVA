@@ -1,10 +1,10 @@
+
 // import java.io.*; // for handling input/output
 import java.util.*; // contains Collections framework
 
-public class Number_of_Merge {
+public class Inversion_count {
 
- 
-     static int mergeCount = 0;
+     public static long count = 0;
 
      public static void mergeArr(int[] arr, int left, int mid, int right) {
           int n1 = mid - left + 1;
@@ -26,9 +26,12 @@ public class Number_of_Merge {
                if (L[i] <= R[j]) {
                     arr[k] = L[i];
                     i++;
+
                } else {
+                    count = count + (n1 - i);
                     arr[k] = R[j];
                     j++;
+
                }
                k++;
           }
@@ -52,7 +55,6 @@ public class Number_of_Merge {
                mergeSort(arr, left, mid);
                mergeSort(arr, mid + 1, right);
                mergeArr(arr, left, mid, right);
-               mergeCount++;
           }
      }
 
@@ -68,36 +70,44 @@ public class Number_of_Merge {
 
                mergeSort(arr, 0, arr.length - 1);
 
-               for (int i : arr) {
-                    System.out.print(i + " ");
-               }
-               System.out.printf("\n" + mergeCount);
+               System.out.print(count);
 
           }
      }
 }
 
-
 /*
- * Number of Merge
-easy
-Time Limit: 2 sec
-Memory Limit: 128000 kB
-Problem Statement
-You are given an unsorted array of length n and must sort it using merge sort while also printing the amount of merges that occur throughout the sorting process.
-Input
-The first line of input will be n, which represents the array's length, followed by the n array items in the second line.
-
-Constraints:
-0<= n <=100000
-Output
-First- line should be the sorted array and the second should be the number of mergers that occurs when the array is sorted using merge sort.
-Example
-Sample Input:
-5
-5 1 2 7 3
-
-Output:
-1 2 3 5 7
-4
+ * Inversion count
+ * medium
+ * Time Limit: 2 sec
+ * Memory Limit: 128000 kB
+ * Problem Statement
+ * Calculate inversion count of array of integers.
+ * Inversion count of an array is quantisation of how much unsorted an array is.
+ * A sorted array has inversion count 0, while an unsorted array has maximum
+ * inversion count.
+ * Formally speaking inversion count = number of pairs i, j such that i < j and
+ * a[i] > a[j].
+ * Input
+ * The first line contain integers N.
+ * The second line of the input contains N singly spaces integers.
+ * 
+ * 1 <= N <= 100000
+ * 1 <= A[i] <= 1000000000
+ * Output
+ * Output one integer the inversion count.
+ * Example
+ * Sample Input
+ * 5
+ * 1 1 3 2 2
+ * 
+ * Sample Output
+ * 2
+ * 
+ * Sample Input
+ * 5
+ * 5 4 3 2 1
+ * 
+ * Sample Output
+ * 10
  */
