@@ -6,6 +6,20 @@
      "configurations": [
           {
                "type": "java",
+               "name": "Launch Max_Complement",
+               "request": "launch",
+               "mainClass": "Max_Complement",
+               "projectName": "afterISA_1ac6ec94"
+          },
+          {
+               "type": "java",
+               "name": "Launch Target_Difference",
+               "request": "launch",
+               "mainClass": "Target_Difference",
+               "projectName": "afterISA_1ac6ec94"
+          },
+          {
+               "type": "java",
                "name": "Launch Solution",
                "request": "launch",
                "mainClass": "Solution",

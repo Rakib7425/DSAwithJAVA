@@ -1,51 +1,48 @@
+
 // import java.io.*; // for handling input/output
 import java.util.*; // contains Collections framework
 
 public class Minimum_Absolute_Difference {
 
-     public static void main(String[] args) {
-          // Main Method is here
-          try (Scanner sc = new Scanner(System.in)) {
-               int n = sc.nextInt();
-               int arrA[] = new int[n];
-               int arrB[] = new int[n];
+    public static void main(String[] args) {
+        // Main Method is here
+        try (Scanner sc = new Scanner(System.in)) {
+            int n = sc.nextInt();
+            int arrA[] = new int[n];
+            int arrB[] = new int[n];
 
-               for (int indexA = 0; indexA < n; indexA++) {
-                    arrA[indexA] = sc.nextInt();
-               }
+            for (int indexA = 0; indexA < n; indexA++) {
+                arrA[indexA] = sc.nextInt();
+            }
 
-               for (int indexB = 0; indexB < n; indexB++) {
-                    arrB[indexB] = sc.nextInt();
-               }
+            for (int indexB = 0; indexB < n; indexB++) {
+                arrB[indexB] = sc.nextInt();
+            }
 
-               int temp = arrA[0];
-               int temp2 = arrB[0];
-
-               for (int i = 0; i < arrA.length; i++) {
-                    for (int j = 0; j < arrB.length; j++) {
-
-                         if (temp < arrB[j]) {
-                              temp2 = arrB[j - 1];
-                              j--;
-                              break;
-                         }
-                    }
-               }
-
-               int ans = temp - temp2;
-               System.out.println(ans);
-
-               // for (int i : arrA) {
-               // System.out.print(i+" ");
-               // }
-               // System.out.println();
-               // for (int j : arrB) {
-               // System.out.print(j+ " ");
-               // }
-
-          }
-     }
+            int i = 0;
+            int j = 0;
+            int minPosDiff = Integer.MAX_VALUE;
+            while (i < n && j < n) {
+                int diff = Math.abs(arrA[i] - arrB[j]);
+                minPosDiff = Math.min(minPosDiff, diff);
+                if (arrA[i] < arrB[j])
+                    i++;
+                else
+                    j++;
+            }
+            System.out.print(minPosDiff);
+        }
+    }
 }
+
+// for (int i : arrA) {
+// System.out.print(i+" ");
+// }
+// System.out.println();
+// for (int j : arrB) {
+// System.out.print(j+ " ");
+// }
+
 /*
  * ? Minimum Absolute Difference
  * easy
