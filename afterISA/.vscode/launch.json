@@ -6,6 +6,13 @@
      "configurations": [
           {
                "type": "java",
+               "name": "Launch Number_of_Merge",
+               "request": "launch",
+               "mainClass": "Number_of_Merge",
+               "projectName": "afterISA_1ac6ec94"
+          },
+          {
+               "type": "java",
                "name": "Launch Max_Complement",
                "request": "launch",
                "mainClass": "Max_Complement",
