@@ -21,7 +21,7 @@ public class Find_a_pair_with_the_given_sum_in_an_array {
 
           int i = 0, j = 0;
           int k = left;
-
+ 
           while (i < n1 && j < n2) {
                if (L[i] <= R[j]) {
                     arr[k] = L[i];
