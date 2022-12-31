@@ -61,16 +61,16 @@ class Inversion_of_array {
      public static void main(String[] args) {
           // Your code here
 
-          Scanner sc = new Scanner(System.in);
+          try (Scanner sc = new Scanner(System.in)) {
+               int n = sc.nextInt();
 
-          int n = sc.nextInt();
+               int arr[] = new int[n];
 
-          int arr[] = new int[n];
-
-          for (int i = 0; i < n; i++) {
-               arr[i] = sc.nextInt();
+               for (int i = 0; i < n; i++) {
+                    arr[i] = sc.nextInt();
+               }
+               mergeSort(arr, 0, n - 1);
           }
-          mergeSort(arr, 0, n - 1);
 
           System.out.print(count);
      }
