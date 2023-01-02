@@ -6,6 +6,13 @@
      "configurations": [
           {
                "type": "java",
+               "name": "Launch Sort_by_Absolute_Difference",
+               "request": "launch",
+               "mainClass": "Sort_by_Absolute_Difference",
+               "projectName": "afterISA_1ac6ec94"
+          },
+          {
+               "type": "java",
                "name": "Launch Find_a_pair_with_the_given_sum_in_an_array",
                "request": "launch",
                "mainClass": "Find_a_pair_with_the_given_sum_in_an_array",

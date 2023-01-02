@@ -53,7 +53,7 @@ class Count_Smaller_Numbers {
                     // this code block is exactly what the problem is asking us for:
                     // a number from the right side of the original input array, is smaller
                     // than a number from the left side
-                    //
+                    
                     // within this code block,
                     // nums[rightPos] is smaller than the start of the left sub-array.
                     // Since left sub-array is already sorted,
