@@ -6,6 +6,13 @@
      "configurations": [
           {
                "type": "java",
+               "name": "Launch Print_Squared_Sorted_Array",
+               "request": "launch",
+               "mainClass": "Print_Squared_Sorted_Array",
+               "projectName": "afterISA_1ac6ec94"
+          },
+          {
+               "type": "java",
                "name": "Launch Sort_by_Absolute_Difference",
                "request": "launch",
                "mainClass": "Sort_by_Absolute_Difference",
