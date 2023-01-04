@@ -39,8 +39,8 @@ class Sort_by_Absolute_Difference {
 			System.out.print(arr[i] + " ");
 
 		System.out.println();
+		
 	}
-
 	// Driver code
 	public static void main(String args[]) {
 		try (Scanner sc = new Scanner(System.in)) {
