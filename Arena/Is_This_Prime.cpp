@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 #pragma GCC optimize "03"
 using namespace std;
-#define Abhishek main
+#define Rakib main
 #define int long long int
 #define ld long double
 #define pi pair<int, int>
@@ -47,7 +47,7 @@ int f(int n, int p)
 	return ans;
 }
 
-signed Abhishek()
+signed Rakib()
 {
 	IOS;
 	int x, n, ans = 1;
