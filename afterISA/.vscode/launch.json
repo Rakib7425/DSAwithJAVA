@@ -6,6 +6,13 @@
      "configurations": [
           {
                "type": "java",
+               "name": "Launch Longest_SubArray_With_Sum_K",
+               "request": "launch",
+               "mainClass": "Longest_SubArray_With_Sum_K",
+               "projectName": "afterISA_1ac6ec94"
+          },
+          {
+               "type": "java",
                "name": "Launch Sara_and_permutations",
                "request": "launch",
                "mainClass": "Sara_and_permutations",
