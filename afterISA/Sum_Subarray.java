@@ -22,7 +22,7 @@ public class Sum_Subarray {
                for (int i = 0; i < n; i++) {
                     arr[i] = sc.nextInt();
                }
-               
+
                int min_length = Integer.MAX_VALUE; // initialize minimum length to maximum integer value
                int start = 0; // initialize start of subarray
                int end = 0; // initialize end of subarray

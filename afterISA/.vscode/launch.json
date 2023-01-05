@@ -6,6 +6,13 @@
      "configurations": [
           {
                "type": "java",
+               "name": "Launch Sara_and_permutations",
+               "request": "launch",
+               "mainClass": "Sara_and_permutations",
+               "projectName": "afterISA_1ac6ec94"
+          },
+          {
+               "type": "java",
                "name": "Launch Different_ways_to_add_parenthesis_2_Contest",
                "request": "launch",
                "mainClass": "Different_ways_to_add_parenthesis_2_Contest",
