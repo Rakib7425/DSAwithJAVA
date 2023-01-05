@@ -7,7 +7,7 @@ import java.util.*; // contains Collections framework
 class Group_Of_Numbers {
     public static void main(String[] args) {
         // Your code here
-        try ( Scanner sc = new Scanner(System.in)) {
+        try (Scanner sc = new Scanner(System.in)) {
             int n = sc.nextInt();
             int[] arr = new int[n];
             for (int i = 0; i < n; i++) {
