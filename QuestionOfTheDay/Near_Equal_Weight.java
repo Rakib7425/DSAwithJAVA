@@ -19,15 +19,16 @@ public class Near_Equal_Weight {
 
     public static void main(String[] args) {
 
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        int arr[] = new int[n];
-        for (int i = 0; i < n; i++) {
-            arr[i] = sc.nextInt();
-        }
+        try (Scanner sc = new Scanner(System.in)) {
+            int n = sc.nextInt();
+            int arr[] = new int[n];
+            for (int i = 0; i < n; i++) {
+                arr[i] = sc.nextInt();
+            }
 
-        int ans = minAbsDiff(arr);
-        System.out.println(ans);
+            int ans = minAbsDiff(arr);
+            System.out.println(ans);
+        }
     }
 }
 
