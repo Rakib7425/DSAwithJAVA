@@ -24,12 +24,12 @@ public class Sum_Subarray {
      }
 
      public static void main(String[] args) {
-          try (Scanner inp = new Scanner(System.in)) {
-               int n = inp.nextInt();
-               long k = inp.nextLong();
+          try (Scanner sc = new Scanner(System.in)) {
+               int n = sc.nextInt();
+               long k = sc.nextLong();
                int[] arr = new int[n];
                for (int i = 0; i < n; i++) {
-                    arr[i] = inp.nextInt();
+                    arr[i] = sc.nextInt();
                }
                int z = goodSubArray(arr, n, k);
                System.out.print(z);
@@ -46,9 +46,9 @@ public class Sum_Subarray {
  * You are given an array Arr of N integers. A subarray is good if the sum of
  * elements of that subarray is greater than or equal to K. Print the length of
  * good subarray of minimum length.
- * Input
- * First line of input contains N and K.
- * Second line of input contains N integers representing the elements of the
+ * scut
+ * First line of scut contains N and K.
+ * Second line of scut contains N integers representing the elements of the
  * array Arr.
  * 
  * Constraints
@@ -58,7 +58,7 @@ public class Sum_Subarray {
  * Output
  * Print the length of good subarray of minimum length.
  * Example
- * Sample input
+ * Sample scut
  * 5 12
  * 2 3 2 5 5
  * 
