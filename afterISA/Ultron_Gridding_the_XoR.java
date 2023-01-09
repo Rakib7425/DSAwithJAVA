@@ -8,7 +8,7 @@ public class Ultron_Gridding_the_XoR {
     public static long f(long r, long c, int i) {
         r += (1l << 62) - (1l << i) + 1;
         c += (1l << i);
-        if (r & c)
+        if (r & c) // ----> Error
             return (1l << i);
         return 0;
     }
