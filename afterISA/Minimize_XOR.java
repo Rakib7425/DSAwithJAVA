@@ -1,7 +1,7 @@
 
 //import java.io.*; // for handling input/output
 import java.util.*; // contains Collections framework
-
+//@Rakib7425
 public class Minimize_XOR {
     public static int minXor(int arr[], int n) {
         Arrays.sort(arr);
