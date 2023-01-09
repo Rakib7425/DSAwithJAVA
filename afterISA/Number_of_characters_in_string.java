@@ -17,10 +17,8 @@ public class Number_of_characters_in_string {
             }
             System.out.println(set.size());
 
-            // long totalCharacters = str.chars().filter(ch -> ch != ' ' && ch !=
-            // 'a').count();
+            // long totalCharacters = str.chars().filter(ch -> ch != ' ' && ch != 'a').count();
             // System.out.print(totalCharacters);
-
         }
     }
 }
