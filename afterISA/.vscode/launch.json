@@ -6,6 +6,13 @@
      "configurations": [
           {
                "type": "java",
+               "name": "Launch Ultron_Gridding_the_XoR",
+               "request": "launch",
+               "mainClass": "Ultron_Gridding_the_XoR",
+               "projectName": "afterISA_1ac6ec94"
+          },
+          {
+               "type": "java",
                "name": "Launch Longest_SubArray_With_Sum_K",
                "request": "launch",
                "mainClass": "Longest_SubArray_With_Sum_K",

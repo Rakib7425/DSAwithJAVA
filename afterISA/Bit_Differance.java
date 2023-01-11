@@ -8,10 +8,11 @@ class Bit_Differance {
             int n = sc.nextInt();
             long ans = 0;
             long arr[] = new long[n];
+
             for (int i = 0; i < n; i++) {
                 arr[i] = sc.nextLong();
-
             }
+            
             for (int i = 0; i < 32; i++) {
                 long count = 0;
                 for (int j = 0; j < n; j++)

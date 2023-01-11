@@ -1,40 +1,41 @@
 
-//import java.io.*; // for handling input/output
-import java.util.*; // contains Collections framework 
+// import java.io.*; // for handling input/output
+import java.util.*; // contains Collections framework
 
 // don't change the name of this class
 // you can add inner classes if needed
+
 public class Ultron_Gridding_the_XoR {
-    public static long f(long r, long c, int i) {
-        r += (1l << 62) - (1l << i) + 1;
-        c += (1l << i);
-        if (r & c) // ----> Error
-            return (1l << i);
+
+    static long f(long r, long c, int i) {
+        r += (1L << 62) - (1L << i) + 1;
+        c += (1L << i);
+        if ((r & c) != 0)
+            return (1L << i);
         return 0;
     }
 
     public static void main(String[] args) {
-        // Main Method is here
+        // Your code here
         try (Scanner sc = new Scanner(System.in)) {
-            // int n = sc.nextInt();
+            long r1 = sc.nextLong();
             long r2 = sc.nextLong();
             long c1 = sc.nextLong();
-            long r1 = sc.nextLong();
             long c2 = sc.nextLong();
             r1--;
             c1--;
             long ans = 0;
-            for (int i = 0; i < 60; i++){
+            for (int i = 0; i < 60; i++) {
                 ans ^= f(r2, c2, i);
                 ans ^= f(r1, c2, i);
                 ans ^= f(r2, c1, i);
                 ans ^= f(r1, c1, i);
             }
             System.out.println(ans);
-
         }
     }
 }
+
 
 /*
  * Ultron : Gridding the XoR
