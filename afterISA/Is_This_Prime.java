@@ -6,50 +6,40 @@ import java.util.*; // contains Collections framework
 // don't change the name of this class
 // you can add inner classes if needed
 public class Is_This_Prime {
-
-    // function to return the set of prime divisors of x
-    public static Set<Integer> prime(int x) {
-        Set<Integer> primes = new HashSet<>();
-        for (int i = 2; i <= Math.sqrt(x); i++) {
-            if (x % i == 0) {
-                if (isPrime(i)) {
-                    primes.add(i);
-                }
-                if (isPrime(x / i)) {
-                    primes.add(x / i);
-                }
+    public static int getPrimePower(int x, int y) {
+        int result = 1;
+        for (int i = 2; i <= x; i++) {
+            if (x % i == 0 && isPrime(i)) {
+                result *= (int) Math.pow(i, getPrimePowerCount(y, i));
+                x /= i;
+                i--;
             }
         }
-        return primes;
+        return result;
     }
 
-    // helper function to check if a number is prime
+    public static int getPrimePowerCount(int y, int p) {
+        int count = 0;
+        while (y % p == 0) {
+            count++;
+            y /= p;
+        }
+        return count;
+    }
+
     public static boolean isPrime(int num) {
-        for (int i = 2; i <= Math.sqrt(num); i++) {
+        if (num == 2 || num == 3) {
+            return true;
+        }
+        if (num == 1 || num % 2 == 0) {
+            return false;
+        }
+        for (int i = 3; i <= Math.sqrt(num); i += 2) {
             if (num % i == 0) {
                 return false;
             }
         }
         return true;
-    }
-
-    // function to return the maximum possible integer p**k where x is divisible by
-    // p**k
-    public static int f(int x, int p) {
-        int k = 1;
-        while (x % (int) Math.pow(p, k) == 0) {
-            k++;
-        }
-        return (int) Math.pow(p, k - 1);
-    }
-
-    // function to return the product of f(y, p) for all p in prime(x)
-    public static int g(int x, int y) {
-        int result = 1;
-        for (int p : prime(x)) {
-            result *= f(y, p);
-        }
-        return result;
     }
 
     public static void main(String[] args) {
@@ -61,14 +51,14 @@ public class Is_This_Prime {
 
             BigInteger result = BigInteger.ONE;
             for (int i = 1; i <= n; i++) {
-                result = result.multiply(BigInteger.valueOf(g(x, i)));
+                result = result.multiply(BigInteger.valueOf(getPrimePower(x, i)));
             }
 
-            System.out.println(result.mod(BigInteger.valueOf(1_000_000_007)));
+            System.out.println(result.mod(BigInteger.valueOf(1000000007)));
         }
     }
-}
 
+}
 
 /*
  * Is this prime?
