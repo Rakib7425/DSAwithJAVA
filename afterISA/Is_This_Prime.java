@@ -4,7 +4,7 @@ import java.math.*;
 import java.util.*; // contains Collections framework
 
 // don't change the name of this class
-// you can add inner classes if needed
+// you can add inner classes if needed   
 public class Is_This_Prime {
     public static int getPrimePower(int x, int y) {
         int result = 1;
