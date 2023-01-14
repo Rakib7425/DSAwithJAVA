@@ -4,7 +4,7 @@ import java.util.*; // contains Collections framework
 
 // don't change the name of this class
 // you can add inner classes if needed
-class Main {
+public class Modular_Multiplicative_Inverse {
     static int modInverse(int a, int m) {
 
         for (int x = 1; x < m; x++)

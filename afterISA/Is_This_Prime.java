@@ -17,7 +17,7 @@ public class Is_This_Prime {
         }
         return result;
     }
-
+    
     public static int getPrimePowerCount(int y, int p) {
         int count = 0;
         while (y % p == 0) {
