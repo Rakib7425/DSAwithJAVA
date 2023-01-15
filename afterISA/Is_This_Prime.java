@@ -1,62 +1,57 @@
+
 // import java.io.*; // for handling input/output
-import java.math.*;
 import java.util.*; // contains Collections framework
 
 // don't change the name of this class
-// you can add inner classes if needed   
+// you can add inner classes if needed
 public class Is_This_Prime {
-    public static int getPrimePower(int x, int y) {
-        int result = 1;
-        for (int i = 2; i <= x; i++) {
-            if (x % i == 0 && isPrime(i)) {
-                result *= (int) Math.pow(i, getPrimePowerCount(y, i));
-                x /= i;
-                i--;
+    public static final long mod = (int) 1e9 + 7;
+
+    public static long power(long a, long b) {
+        long ans = 1;
+        b %= (mod - 1);
+        while (b > 0) {
+            if ((b & 1) == 1) {
+                ans = (ans * a) % mod;
             }
+            b >>= 1;
+            a = (a * a) % mod;
         }
-        return result;
+        return ans;
     }
 
-    public static int getPrimePowerCount(int y, int p) {
-        int count = 0;
-        while (y % p == 0) {
-            count++;
-            y /= p;
+    public static long f(long n, long p) {
+        long ans = 1;
+        long cur = 1;
+        while (cur <= n / p) {
+            cur *= p;
+            long z = power(p, n / cur);
+            ans = (ans * z) % mod;
         }
-        return count;
-    }
-
-    public static boolean isPrime(int num) {
-        if (num == 2 || num == 3) {
-            return true;
-        }
-        if (num == 1 || num % 2 == 0) {
-            return false;
-        }
-        for (int i = 3; i <= Math.sqrt(num); i += 2) {
-            if (num % i == 0) {
-                return false;
-            }
-        }
-        return true;
+        return ans;
     }
 
     public static void main(String[] args) {
         // Your code here
         try (Scanner sc = new Scanner(System.in)) {
-            // take input from user
-            int x = sc.nextInt();
-            int n = sc.nextInt();
-
-            BigInteger result = BigInteger.ONE;
-            for (int i = 1; i <= n; i++) {
-                result = result.multiply(BigInteger.valueOf(getPrimePower(x, i)));
+            long x = sc.nextLong();
+            long n = sc.nextLong();
+            long ans = 1;
+            for (long i = 2; i * i <= x; i++) {
+                if (x % i != 0) {
+                    continue;
+                }
+                ans = (ans * f(n, i)) % mod;
+                while (x % i == 0) {
+                    x /= i;
+                }
             }
-
-            System.out.println(result.mod(BigInteger.valueOf(1000000007)));
+            if (x > 1) {
+                ans = (ans * f(n, x)) % mod;
+            }
+            System.out.print(ans);
         }
     }
-
 }
 
 /*
