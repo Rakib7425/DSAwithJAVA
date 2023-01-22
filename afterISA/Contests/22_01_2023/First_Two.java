@@ -1,0 +1,57 @@
+/**
+ * First_Two
+ */
+public class First_Two {
+
+    // !Starts from here
+    static int firstTwo(int N) {
+        // Enter your code here
+        int reverse = 0;
+        while (N > 0) {
+            int rem = N % 10;
+            reverse = reverse * 10 + rem;
+            N = N / 10;
+        }
+        return reverse % 100;
+    }
+    // * Ends Here
+
+    public static void main(String[] args) {
+        System.out.println(firstTwo(3444343));
+    }
+
+}
+
+
+/*
+ * First two
+ * easy
+ * Time Limit: 2 sec
+ * Memory Limit: 128000 kB
+ * Problem Statement
+ * Given a number N your task is to print its first two digits in reverse order.
+ * For eg:- If the given number is 123 then the output will be 21.
+ * Input
+ * User Task:
+ * Since this will be a functional problem, you don't have to take input. You
+ * just have to complete the function firstTwo() that takes integer N argument.
+ * 
+ * Constraints:-
+ * 111 <= N <= 9999
+ * 
+ * Note:- It is guaranteed that the given number will not contain any 0.
+ * Output
+ * Return the first two digits of the given number in reverse order.
+ * Example
+ * Sample Input:-
+ * 3423
+ * 
+ * Sample Output:-
+ * 43
+ * 
+ * Sample Input:-
+ * 1234
+ * 
+ * Sample Output:-
+ * 21
+ */
