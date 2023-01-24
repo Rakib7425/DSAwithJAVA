@@ -6,6 +6,13 @@
      "configurations": [
           {
                "type": "java",
+               "name": "Launch Find_Inverse",
+               "request": "launch",
+               "mainClass": "Find_Inverse",
+               "projectName": "afterISA_1ac6ec94"
+          },
+          {
+               "type": "java",
                "name": "Launch Ultron_Gridding_the_XoR",
                "request": "launch",
                "mainClass": "Ultron_Gridding_the_XoR",
