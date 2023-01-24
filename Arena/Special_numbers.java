@@ -24,6 +24,7 @@ class Special_numbers {
     }
 }
 
+
 /*
  * Special numbers
  * Time Limit: 2 sec
