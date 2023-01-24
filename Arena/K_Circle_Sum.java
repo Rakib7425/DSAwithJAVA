@@ -15,13 +15,14 @@ public class K_Circle_Sum {
             sum = sum - arr[i - 1] + arr[(i + K - 1) % N];
             result[i] = sum;
         }
+        
         for (int val : result) {
             System.out.print(val + " ");
         }
         // return result;
     }
 
-    
+
 
 }
 /*
