@@ -1,7 +1,6 @@
 
 
-import java.util.HashMap;
-import java.util.Scanner;
+import java.util.*;
 
 /**
  * Max_freq
