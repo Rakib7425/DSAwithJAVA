@@ -29,6 +29,16 @@ public class Count_0_and_1s {
 
      }
 }
+
+
+/*
+? Explanation 
+
+This code takes in an array of integers and counts the number of 0s and 1s in the array. It first creates a Scanner object to take in user input. It then creates an array with the size of the number entered by the user. The code then iterates through each element of the array, counting how many 1s and 0s there are, and prints out the total count for each at the end.
+* 
+*/
+
+
 /*
  * Count of 0's and 1's
  * Time Limit: 2 sec
