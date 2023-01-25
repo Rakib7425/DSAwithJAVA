@@ -1,3 +1,37 @@
+
+import java.util.*;
+
+/**
+ * Count_duplicates
+ */
+public class Count_duplicates {
+
+     public static void main(String[] args) {
+          try (Scanner inputTaker = new Scanner(System.in)) {
+               int n = inputTaker.nextInt();
+               int[] arr = new int[n];
+               for (int i = 0; i < n; i++) {
+                    arr[i] = inputTaker.nextInt();
+               }
+               HashMap<Integer, Integer> map = new HashMap<>();
+               for (int i = 0; i < n; i++) {
+                    if (map.containsKey(arr[i])) {
+                         Integer prevCount = map.get(arr[i]);
+                         map.put(arr[i], prevCount + 1);
+                    } else {
+                         map.put(arr[i], 1);
+                    }
+               }
+
+               for (Integer number : map.keySet()) {
+                    if (map.get(number) > 1) {
+                         System.out.println(number + " " + map.get(number));
+                    }
+               }
+          }
+     }
+}
+
 /* 
 Count duplicates
 asked in interviews by 15 companies
@@ -38,37 +72,3 @@ test 1: Only 1 and 2 are repeated. Both are repeated twice. So, we print:
 2 -> frequency of 2
 1 is printed before 2 as it is smaller than 2
 */
-
-// import java.util.HashMap;
-import java.util.*;
-
-/**
- * Count_duplicates
- */
-public class Count_duplicates {
-
-     public static void main(String[] args) {
-          try (Scanner inputTaker = new Scanner(System.in)) {
-               int n = inputTaker.nextInt();
-               int[] arr = new int[n];
-               for (int i = 0; i < n; i++) {
-                    arr[i] = inputTaker.nextInt();
-               }
-               HashMap<Integer, Integer> map = new HashMap<>();
-               for (int i = 0; i < n; i++) {
-                    if (map.containsKey(arr[i])) {
-                         Integer prevCount = map.get(arr[i]);
-                         map.put(arr[i], prevCount + 1);
-                    } else {
-                         map.put(arr[i], 1);
-                    }
-               }
-
-               for (Integer number : map.keySet()) {
-                    if (map.get(number) > 1) {
-                         System.out.println(number + " " + map.get(number));
-                    }
-               }
-          }
-     }
-}

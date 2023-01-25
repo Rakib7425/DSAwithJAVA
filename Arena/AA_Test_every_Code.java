@@ -2,20 +2,25 @@ import java.util.*;
 
 public class AA_Test_every_Code {
 
+    public static void modifyArray(int[] nums, int n) {
+        for (int i = 0; i < n - 1; i++) {
+            nums[i] = nums[i + 1];
+        }
+        n--;
+        for (int i = 0; i < n; i++) {
+            System.out.print(nums[i] + " ");
+        }
+    }
+
     public static void main(String[] args) {
+        // Your code here
         try (Scanner sc = new Scanner(System.in)) {
-            int a = sc.nextInt();
-            int b = sc.nextInt();
-            int k = sc.nextInt();
-            sc.close();
-
-            int count = 0;
-            while (a < b) {
-                a *= k;
-                count++;
+            int n = sc.nextInt();
+            int[] nums = new int[n];
+            for (int i = 0; i < n; i++) {
+                nums[i] = sc.nextInt();
             }
-
-            System.out.println(count);
+            modifyArray(nums, n);
         }
     }
 }
