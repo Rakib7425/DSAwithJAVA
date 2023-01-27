@@ -9,9 +9,9 @@ class Node {
     }
 }
 
-// Code Starts from here
 public class Delete_the_Middle_of_the_Linked_List {
-
+    
+    // Code Starts from here
     public static Node deleteMiddleElement(Node head) {
         int cnt = 0;
         Node temp = head;
@@ -37,9 +37,9 @@ public class Delete_the_Middle_of_the_Linked_List {
         temp.next = temp.next.next;
         return head;
     }
+    // Code Ends here
 
 }
-// Code Ends here
 
 /*
  * 
