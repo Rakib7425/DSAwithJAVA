@@ -4,7 +4,7 @@ import java.util.*; // contains Collections framework
 
 // don't change the name of this class
 // you can add inner classes if needed
-class Main {
+class Rev_Strings {
     public static void main(String[] args) {
         try (Scanner sc = new Scanner(System.in)) {
             String rev = "";

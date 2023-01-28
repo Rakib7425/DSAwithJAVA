@@ -28,7 +28,7 @@ class Teacher {
     }
 }
 
-class Main {
+class Class_Teacher {
     public static void main(String[] args) {
         // Your code here
         Scanner sc = new Scanner(System.in);

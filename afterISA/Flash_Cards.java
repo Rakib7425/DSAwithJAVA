@@ -21,7 +21,7 @@ class Flashcard {
     }
 }
 
-class Main {
+class Flash_Cards {
     public static void main(String[] args) {
         // Your code here
         Scanner sc = new Scanner(System.in);

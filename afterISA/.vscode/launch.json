@@ -6,6 +6,13 @@
      "configurations": [
           {
                "type": "java",
+               "name": "Launch Gray_Code",
+               "request": "launch",
+               "mainClass": "Gray_Code",
+               "projectName": "afterISA_1ac6ec94"
+          },
+          {
+               "type": "java",
                "name": "Launch Find_Inverse",
                "request": "launch",
                "mainClass": "Find_Inverse",
