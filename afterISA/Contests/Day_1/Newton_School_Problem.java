@@ -24,6 +24,9 @@ class Newton_School_Problem {
           }
      }
 }
+
+
+
 /*
  * Newton School Problem
  * easy
