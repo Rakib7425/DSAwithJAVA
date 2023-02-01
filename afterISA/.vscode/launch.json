@@ -6,6 +6,13 @@
      "configurations": [
           {
                "type": "java",
+               "name": "Launch Flash_Cards",
+               "request": "launch",
+               "mainClass": "Flash_Cards",
+               "projectName": "afterISA_1ac6ec94"
+          },
+          {
+               "type": "java",
                "name": "Launch Gray_Code",
                "request": "launch",
                "mainClass": "Gray_Code",

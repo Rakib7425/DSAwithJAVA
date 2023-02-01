@@ -10,7 +10,7 @@ class Node {
 }
 
 public class Delete_the_Middle_of_the_Linked_List {
-    
+
     // Code Starts from here
     public static Node deleteMiddleElement(Node head) {
         int cnt = 0;
