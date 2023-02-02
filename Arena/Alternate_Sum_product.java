@@ -10,6 +10,7 @@ public class Alternate_Sum_product {
     public static void Solve(int arr[], int n) {
         int odd = 1;
         int even = 0;
+        
         for (int i = 0; i < n; i++) {
             if (i % 2 == 0) {
                 odd *= arr[i];
