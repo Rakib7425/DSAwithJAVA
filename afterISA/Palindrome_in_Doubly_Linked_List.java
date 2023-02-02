@@ -22,6 +22,7 @@ public class Palindrome_in_Doubly_Linked_List {
             }
             ptr1 = ptr1.next;
             ptr2 = ptr2.prev;
+            
             if (ptr1.next == ptr2) { // even
                 break;
             }
