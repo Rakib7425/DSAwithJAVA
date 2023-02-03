@@ -22,7 +22,6 @@ public class Palindrome_in_Doubly_Linked_List {
             }
             ptr1 = ptr1.next;
             ptr2 = ptr2.prev;
-            
             if (ptr1.next == ptr2) { // even
                 break;
             }
@@ -37,7 +36,7 @@ public class Palindrome_in_Doubly_Linked_List {
 
 
 /*
-Palindrome in Doubly Linked List
+ * Palindrome in Doubly Linked List
 medium
 Time Limit: 2 sec
 Memory Limit: 128000 kB

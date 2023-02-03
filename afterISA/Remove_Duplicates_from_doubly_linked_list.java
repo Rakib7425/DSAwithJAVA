@@ -11,20 +11,26 @@ class Node {
 }
 
 public class Remove_Duplicates_from_doubly_linked_list {
+
+
+// ! Code Stsrts From Here
     public static Node deleteDuplicates(Node head) {
-        Node curr = head;
-        while (curr != null && curr.next != null) {
-            if (curr.val == curr.next.val) {
-                curr.next = curr.next.next;
-                if (curr.next != null) {
-                    curr.next.prev = curr;
+        Node temp = head;
+        while (temp != null && temp.next != null) {
+            if (temp.val == temp.next.val) {
+                temp.next = temp.next.next;
+                if (temp.next != null) {
+                    temp.next.prev = temp;
                 }
             } else {
-                curr = curr.next;
+                temp = temp.next;
             }
         }
         return head;
     }
+    // !Code Ends
+
+
 }
 
 /*
