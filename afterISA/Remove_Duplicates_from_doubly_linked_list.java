@@ -12,8 +12,7 @@ class Node {
 
 public class Remove_Duplicates_from_doubly_linked_list {
 
-
-// ! Code Stsrts From Here
+    // ! Code Stsrts From Here
     public static Node deleteDuplicates(Node head) {
         Node temp = head;
         while (temp != null && temp.next != null) {
@@ -29,7 +28,6 @@ public class Remove_Duplicates_from_doubly_linked_list {
         return head;
     }
     // !Code Ends
-
 
 }
 
