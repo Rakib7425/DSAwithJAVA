@@ -7,7 +7,6 @@ public class Operations_on_queue {
     public static void enqueue(Queue<Integer> qu, int x) {
         // enter your code here
         qu.add(x);
-
     }
 
     // dequeue():- that takes the queue as parameter.
