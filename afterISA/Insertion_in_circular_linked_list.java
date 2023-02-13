@@ -1,12 +1,12 @@
-class Node {
-    Node next;
-    int val;
+// class Node {
+//     Node next;
+//     int val;
 
-    Node(int val) {
-        this.val = val;
-        next = null;
-    }
-}
+//     Node(int val) {
+//         this.val = val;
+//         next = null;
+//     }
+// }
 
 public class Insertion_in_circular_linked_list {
 

@@ -1,15 +1,17 @@
 /**
  * Merge_two_sorted_linked_list
  */
-class Node {
-    Node next;
-    int val;
 
-    Node(int val) {
-        this.val = val;
-        next = null;
-    }
-}
+ 
+// class Node {
+//     Node next;
+//     int val;
+
+//     Node(int val) {
+//         this.val = val;
+//         next = null;
+//     }
+// }
 
 public class Merge_two_sorted_linked_list {
 
