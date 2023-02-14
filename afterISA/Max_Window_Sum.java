@@ -19,7 +19,9 @@ public class Max_Window_Sum {
             }
 
             Deque<Integer> deque = new ArrayDeque<>();
+
             long sum = 0;
+            
             for (int i = 0; i < n; i++) {
                 while (!deque.isEmpty() && deque.peek() < i - k + 1) {
                     deque.poll();
