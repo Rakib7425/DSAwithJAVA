@@ -15,8 +15,8 @@ public class Unique_Sorted_Elements {
                 treeSet.add(sc.nextInt());
             }
 
-            for (Integer a : treeSet) {
-                System.out.print(a + " ");
+            for (Integer elem : treeSet) {
+                System.out.print(elem + " ");
             }
         }
     }
