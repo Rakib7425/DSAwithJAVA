@@ -49,17 +49,18 @@ public class Max_Product {
     }
 }
 
-/* int maxPct = Integer.MIN_VALUE;
-    for(int i=0; i<n-1; i++){
-        for(int j=i+1; j<n; j++){
-            int product = arr[i]* arr[j];
-            if(product > maxPct){
-                maxPct = product;
-            }
-        }
-    }
-    System.out.print(maxPct);
-*/
+/*
+ * int maxPct = Integer.MIN_VALUE;
+ * for(int i=0; i<n-1; i++){
+ * for(int j=i+1; j<n; j++){
+ * int product = arr[i]* arr[j];
+ * if(product > maxPct){
+ * maxPct = product;
+ * }
+ * }
+ * }
+ * System.out.print(maxPct);
+ */
 
 /*
  * Max Product
