@@ -1,0 +1,73 @@
+<!-- html code goes here -->
+<!-- html code goes here -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form method="POST" id="form">
+        <label for="name"> Name</label>
+        <input type="text" id="name" name="name" required><br>
+
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" required><br>
+
+        <label for="gender">M</label>
+        <input type="radio" name="gender" required>
+        <label for="F">F</label>
+        <input type="radio" name="gender" id="F" required> <br>
+
+        <label for="cars">Chose Your Car Brand</label>
+        <select name="cars" id="cars">
+            <option value="BMW">BMW</option>
+            <option value="Audi">Audi</option>
+            <option value="Mercedez">Mercedez</option>
+        </select> <br>
+
+        <label for="age">Age:</label>
+        <input type="number" name="age" id="age" required><br>
+
+        <label for="portfolio">Portfolio</label>
+        <input type="number" name="portfolio" id="portfolio" required> <br>
+
+        <label for="dob">dob</label>
+        <input type="date" name="dob" id="dob" required> <br>
+
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" required> <br>
+
+        <button type="submit" value="submit">Submit</button>
+    </form>
+</body>
+
+</html>
+
+<!-- 
+    Signup Form Car
+Make a Signup form that has the following HTML elements
+1. Name*,
+2. Email*
+3. Gender* (radio buttons),
+4. Car Brands* (options : [BMW, Audi, Mercedez])
+5. Age*
+6. DOB* (date type input)
+7. Password*
+8. submit button.
+
+Kindly follow all the instructions mentioned below so that your code passes all the test cases
+
+Instructions:
+1. * are required fields that is they should have the required attributes,
+2. Use method attribute value that you should use in this case for the form!
+3. The respective input elements for the mentioned fields should have ids
+#name, #email, #password, #cars, #age, #dob. For example, The element for selecting a car brand should have id #cars
+4. The radio buttons for gender should have name attribute as gender.
+5. All input elements must also have corresponding labels with for attribute set to the ids of the element to which they belong.
+For example, the label for input of name will be <label for="name"> Name</label>
+ -->
