@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* css code goes here */
+        /* All paragraphs should have a font-size of 18px */
+
+        p {
+            font-size: 18px;
+        }
+
+        /* The first child of each section should have a background color of rgb(255, 255, 0) */
+        section> :first-child {
+            background-color: rgb(255, 255, 0);
+        }
+
+        /* The last child of each section should have a background color of rgb(119, 141, 240) */
+        section> :last-child {
+            background-color: rgb(119, 141, 240);
+        }
+
+        /* The second list item in each unordered list should have a font-weight of bold */
+        ul li:nth-child(2) {
+            font-weight: bold;
+        }
+
+        /* The last list item in each unordered list should have a text-decoration of underline */
+        ul li:last-child {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section>
+        <p>Paragraph 1</p>
+        <p>Paragraph 2</p>
+        <ul>
+            <li>List item 1</li>
+            <li>List item 2</li>
+            <li>List item 3</li>
+        </ul>
+    </section>
+    <section>
+        <p>Paragraph 3</p>
+        <p>Paragraph 4</p>
+        <ul>
+            <li>List item 1</li>
+            <li>List item 2</li>
+            <li>List item 3</li>
+        </ul>
+    </section>
+</body>
+
+</html>
