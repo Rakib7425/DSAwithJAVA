@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>list in tables with forms</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- html code goes here -->
+    <form>
+        <div>
+            <label for="fname">First name:</label> <br>
+            <input type="text" id="fname" name="fname">
+        </div>
+        <div>
+            <label for="lname">Last name:</label> <br>
+            <input type="text" id="lname" name="lname">
+        </div>
+        <br>
+        <button type="submit" id="submit">Submit</button>
+    </form>
+    <br>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Group 1</th>
+                <th>Group 2</th>
+                <th>Group 3</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <ul>
+                        <li>Hira</li>
+                        <li>Kamal</li>
+                        <li>Rajnesh</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>Rahul</li>
+                        <li>Piyush</li>
+                        <li>Om</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>Jatin</li>
+                        <li>Karan</li>
+                        <li>Brijesh</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>1600</td>
+                <td>1400</td>
+                <td>1000</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>

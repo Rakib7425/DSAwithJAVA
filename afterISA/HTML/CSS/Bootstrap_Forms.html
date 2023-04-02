@@ -1,0 +1,191 @@
+<!-- Write your code here -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
+        </script>
+</head>
+
+<body>
+
+
+    <form>
+        <div class="container  w-50">
+            <div class="row">
+                <div class="col text-center">
+                    <h1>Newton School</h1>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="username-input" placeholder="Username"
+                        onchange="onInput('username-input')" />
+                    <label for="username-input"> User Name</label>
+                </div>
+            </div>
+
+
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Email handler" aria-label="email_handler"
+                    id="email-handler-input" onchange="onInput('email-handler-input')" />
+                <span class="input-group-text">@</span>
+                <input type="text" class="form-control" placeholder="Server" aria-label="Server" id="server-input"
+                    onchange="onInput('server-input')" />
+            </div>
+
+            <div class="mb-3">
+                <label for="password-input" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password-input" placeholder="Password..."
+                    onchange="onInput('password-input')">
+            </div>
+
+            <label for="college-input" class="form-label">Select your college name.</label>
+            <input class="form-control" list="collge-options" id="college-input" placeholder="Type to search..."
+                onchange="onInput('college-input')" />
+            <datalist id="collge-options">
+                <option value="NIT"></option>
+                <option value="BITS"></option>
+                <option value="IIT"></option>
+                <option value="IIIT"></option>
+                <option value="other"></option>
+            </datalist>
+
+            <div class="form-check form-switch m-3">
+                <input class="form-check-input" type="checkbox" id="conditions-input"
+                    onchange="onInput('conditions-input')" />
+                <label class="form-check-label" for="conditions-input">Accept all terms and conditions</label>
+            </div>
+
+            <div class="progress m-2">
+                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                    style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" id="progress-bar-new">
+                </div>
+            </div>
+            <div class="d-flex justify-content-center m-3">
+                <button type="button" class="btn btn-primary" id="submit-button" disabled>
+                    Submit
+                </button>
+            </div>
+        </div>
+
+    </form>
+
+
+
+    <script>
+        let progress = 0;
+        let uname = true,
+            email = true,
+            server = true,
+            password = true,
+            college = true,
+            contitions = true;
+        document.getElementById("submit-button").disabled = true;
+
+        function onInput(typep) {
+            if (document.getElementById(typep).value !== "") {
+                if (typep == "username-input" && uname) {
+                    progress++;
+                    uname = false;
+                }
+                if (typep == "email-handler-input" && email) {
+                    progress++;
+                    email = false;
+                }
+                if (typep == "server-input" && server) {
+                    progress++;
+                    server = false;
+                }
+                if (typep == "password-input" && password) {
+                    progress++;
+                    password = false;
+                }
+                if (typep == "college-input" && college) {
+                    progress++;
+                    college = false;
+                }
+                if (typep == "conditions-input") {
+                    if (contitions) progress++;
+                    if (!contitions) progress--;
+
+                    contitions = false;
+                }
+                document.getElementById("progress-bar-new").style =
+                    "width: " + (progress * 100) / 6 + "%";
+
+                if (progress == 6)
+                    document.getElementById("submit-button").disabled = false;
+                else document.getElementById("submit-button").disabled = true;
+            } else if (document.getElementById(typep).value == "") {
+                if (typep == "username-input" && !uname) {
+                    progress--;
+                    uname = false;
+                }
+                if (typep == "email-handler-input" && !email) {
+                    progress--;
+                    email = false;
+                }
+                if (typep == "server-input" && !server) {
+                    progress--;
+                    server = false;
+                }
+                if (typep == "password-input" && !password) {
+                    progress--;
+                    password = false;
+                }
+                if (typep == "college-input" && !college) {
+                    progress--;
+                    college = false;
+                }
+                if (typep == "conditions-input" && !contitions) {
+                    progress--;
+                    contitions = false;
+                }
+                document.getElementById("progress-bar-new").style =
+                    "width: " + (progress * 100) / 6 + "%";
+
+                if (progress == 6)
+                    document.getElementById("submit-button").disabled = false;
+                else document.getElementById("submit-button").disabled = true;
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
+<!-- 
+    Bootstrap Forms
+Creating HTML forms can be tedious work(especially the CSS part). But Bootstrap got our back. With bootstrap inbuilt support for the input form. Building a form is very easy.
+Details
+Create a form using Bootstrap.
+Fields Required
+
+field	id	description
+username	username-input	This field should have a floating label.
+email	email-handler-input, server-input	first field for email handler name and other for the server name with a @ between them.
+password	password-input	the student should be able to type their password. It should be rendered along with a label having text Password, and a placeholder having text Password....
+college name	college-input	Should use datalist to render a list of known colleges(NIT,BITS,IIT,IIIT,other). This input should be linked to the datalist. The data list should have id collge-options. Along with the label with text Select your college name.
+conditions	conditions-input	Use a switch to render a check box asking whether the user accepts all terms and conditions. Label should be rendered with text Accept all terms and conditions.
+submit	submit-button	Should be disabled until the form is completely filled..
+progress bar	progress-bar-new	Initially progress bar should be empty(width:0%) later its length should increase as the form is filled. And should be 100% when complete form is filled.
+
+
+Acceptance Criteria
+Should use what is recommend by bootstrap
+Should use input-group class wherever required.
+Label should have for attribute defined
+ -->
