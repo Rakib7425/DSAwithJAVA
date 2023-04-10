@@ -5,6 +5,7 @@ let age = 18;
 let greet = `My name is ${name} and I am ${age} years old`;
 // console.log(greet);
 
+
 /*
 Primitives
 easy
