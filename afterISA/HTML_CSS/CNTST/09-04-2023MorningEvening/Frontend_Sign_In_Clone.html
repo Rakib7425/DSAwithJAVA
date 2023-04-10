@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Sign In Clone</title>
+    <style>
+        /* css code goes here */
+        body {
+            background-image: url("https://r4.wallpaperflare.com/wallpaper/108/140/869/digital-digital-art-artwork-fantasy-art-drawing-hd-wallpaper-d8b62d28c0f06c48d03c114ec8f2b4aa.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .container {
+            background-color: rgb(255, 255, 255);
+            width: 480px;
+            margin: 60px auto;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .container-title {
+            font-size: 40px;
+        }
+
+        .container-subtitle {
+            color: rgb(104, 104, 104);
+        }
+
+        form input[type="email"],
+        form input[type="password"] {
+            border: 1px solid rgb(166, 164, 164);
+            margin-bottom: 15px;
+            padding: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 700;
+            width: 95%;
+        }
+
+        .signin-btn {
+            background-color: rgb(2, 117, 216);
+            color: rgb(255, 255, 255);
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 17px;
+            font-weight: bold;
+            width: 100%;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .signin-btn:hover {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- html code goes here -->
+    <div class="container">
+        <h1 class="container-title">Sign In</h1>
+        <h3 class="container-subtitle">Use your account for sign in</h3>
+        <form>
+            <input type="email" id="inputEmail" name="email" placeholder="Enter email" required>
+            <input type="password" id="inputPassword" name="password" placeholder="Enter password" required>
+            <button type="submit" class="signin-btn">Sign In</button>
+        </form>
+        <p class="signup-para">No account? <a href="/signup" class="signup-link">Create one</a>.</p>
+    </div>
+</body>
+
+</html>
+
+<!-- 
+    Frontend Sign In Clone
+In this question, you will be creating a sign-in form and adding styles to it. The question is divided into two parts: HTML and CSS.
+HTML:
+
+Create a div with the class container. Within the div, create a <h1>, <h3>, and a <form> tag.
+
+The <h1> should have a class "container-title" with the text "Sign In". And the <h3> should have a class "container-subtitle" with the text "Use your account for sign in.".
+
+The form should include the following fields:
+
+
+Email field with the id "inputEmail", type as email, placeholder as "Enter email", and it should be a required field.
+
+Password field with the id "inputPassword", type as password, placeholder as "Enter password", and it should be a required field as well.
+
+The form should also include a "Sign In" button with the class "signin-btn", and type as "submit".
+
+Below the form, there should be a message within a <p> tag with class "signup-para" that says "No account? Create one". The "Create one" part should be a link to "/signup" and enclosed with an <a> with class "signup-link" .
+
+
+
+
+CSS:
+
+Select the body tag, and give it a background image of "https://r4.wallpaperflare.com/wallpaper/108/140/869/digital-digital-art-artwork-fantasy-art-drawing-hd-wallpaper-d8b62d28c0f06c48d03c114ec8f2b4aa.jpg". The image should not repeat, and size of the background image should be cover. The font family should be "Arial, Helvetica, sans-serif".
+
+Select the div with the class container, and give it a background color of rgb(255, 255, 255). The width of the container should be 400px, and the container should be positioned in the center of the screen. This should be achieved should width and margin properties. Add a padding of 30px, and a margin from the top of 60px. The text within the container should be centrally aligned.
+
+The <h3> should have the font color of rgb(104, 104, 104) .
+
+Both the input fields, within the form, should have the same CSS, that is, border of 1px solid rgb(166, 164, 164), bottom margin of 15px, padding of 10px, font same as the font of the body tag, font weight of 700, and width should be 95%.
+
+Select the button, and give it a background color of rgb(2, 117, 216), with font the same as the font of the body tag. Remove the border, and add a padding of 10px. The color of the font should be rgb(255, 255, 255). The font size of the text within the button should be 17px and the width of the button should be 100%. When the mouse hovers over the button, the cursor should change to a pointer.
+
+
+This is how the Sign In form should look like
+(Expand the question text section to increase the size of the image.)
+ -->
