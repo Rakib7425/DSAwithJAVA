@@ -1,0 +1,318 @@
+/* css code goes here */
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@400;500;700&family=Poppins:wght@300;500;700&display=swap');
+
+/* body style start */
+body {
+    margin: 0;
+    background-color: rgb(25, 20, 20);
+    font-family: 'Poppins', sans-serif;
+}
+
+/* nav style start */
+nav {
+    background-color: rgb(25, 20, 20);
+    display: flex;
+    justify-content: space-between;
+    padding-right: 25px;
+    padding-left: 10px;
+}
+
+nav img {
+    width: 60px;
+    height: 60px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+nav a:hover {
+    color: rgb(30, 215, 96);
+}
+
+
+/* main style start */
+#download {
+    background-color: rgb(25, 20, 20);
+    /* background-color: rgba(0,0,0,0); */
+    text-align: center;
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+}
+
+main h1 {
+    font-weight: 700;
+    line-height: 2;
+}
+
+main h2 {
+    font-weight: 500;
+    line-height: 3;
+}
+
+main button {
+    background-color: rgb(255, 255, 255);
+    padding: 12px;
+    margin-bottom: 35px;
+    font-weight: 500;
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+}
+
+button:hover {
+    transform: scale(1.02);
+}
+
+@media screen and(max-width: 650px) {
+    main button {
+        width: 100%;
+    }
+}
+
+/* main style ends */
+
+/* section style start */
+#difference-table {
+    background-color: rgb(246, 246, 246);
+    text-align: center;
+    padding: 20px 40px;
+}
+
+section h1 {
+    font-weight: 700;
+    padding: 0px 50px;
+}
+
+section table {
+    max-width: 500px;
+    margin: auto;
+    padding: 20px 45px;
+}
+
+table th {
+    font-weight: 300;
+}
+
+table td {
+    border-bottom: 1px solid rgb(170, 170, 170);
+}
+
+.fa-circle-check {
+    color: rgb(30, 215, 96);
+    font-size: 30px;
+}
+
+.fa-circle-xmark {
+    color: rgb(255, 0, 0);
+    font-size: 30px;
+}
+
+section button {
+    background-color: rgb(25, 20, 20);
+    padding: 12px 40px;
+    font-weight: 500;
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    color: rgb(255, 255, 255);
+}
+
+/* section style ends */
+
+/* Style the premium plans section */
+#premium {
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 20px;
+}
+
+#premium h2 {
+    margin: 0;
+}
+
+.price-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+    text-align: left;
+    padding: 20px 100px;
+}
+
+.price-cards>article {
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px rgb(170, 170, 170);
+    padding: 20px;
+}
+
+article button {
+    background-color: rgb(25, 20, 20);
+    padding: 12px 40px;
+    font-family: inherit;
+    font-weight: 500;
+    border-radius: 20px;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    width: 100%;
+}
+
+article button:hover {
+    transform: scale(1.02);
+}
+
+.card-header {
+    border-bottom: 1px solid rgb(170, 170, 170);
+}
+
+.card-header span {
+    display: inline-block;
+    font-size: .75rem;
+    background-color: rgb(13, 114, 234);
+    color: rgb(255, 255, 255);
+    padding: 5px;
+    font-weight: 500;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.card-header h3 {
+    margin-bottom: 0;
+}
+
+.card-header p {
+    margin: 0;
+    font-weight: 300;
+}
+
+.card-header li {
+    font-weight: 500;
+}
+
+@media (max-width : 650px) {
+    .price-cards {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, auto);
+        padding: 20px;
+    }
+
+    .card-header span {
+        display: inline-block;
+    }
+}
+
+/* 5th part */
+#students-offer {
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 20px;
+}
+
+#students-offer button {
+    background-color: rgb(255, 255, 255);
+    padding: 12px 40px;
+    font-family: inherit;
+    font-weight: 700;
+    border-radius: 20px;
+    cursor: pointer;
+    color: rgb(25, 20, 20);
+}
+
+#students-offer button:hover {
+    transform: scale(1.02);
+}
+
+form {
+    margin-top: 20px;
+    border: 1px solid rgb(170, 170, 170);
+    border-radius: 10px;
+    padding: 25px;
+    text-align: left;
+}
+
+input#email {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 5px;
+    font-family: inherit;
+}
+
+input#first-name,
+input#last-name {
+    width: 46%;
+    padding: 5px;
+    font-family: inherit;
+}
+
+@media (width <=650px) {
+
+    input#first-name,
+    input#last-name {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+}
+
+form p {
+    margin-bottom: 0;
+}
+
+select#country,
+select#college-university {
+    width: 100%;
+    padding: 5px;
+    font-family: inherit;
+    margin-bottom: 10px;
+}
+
+input#contact-number {
+    display: block;
+    width: 100%;
+    padding: 5px;
+    font-family: inherit;
+    margin-bottom: 10px;
+}
+
+input#consent-checkbox {
+    cursor: pointer;
+}
+
+form button {
+    display: block;
+    margin-top: 10px;
+}
+
+
+/* footer */
+footer {
+    padding: 40px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+footer a {
+    text-decoration: none;
+}
+
+footer i {
+    color: rgb(255, 255, 255);
+    margin-left: 10px;
+    font-size: 1.5rem;
+}
+
+footer i:hover {
+    color: rgb(30, 215, 96);
+}
+
+footer p {
+    color: rgb(170, 170, 170);
+}
