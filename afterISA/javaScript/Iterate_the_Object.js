@@ -1,16 +1,17 @@
 function solve(obj) {
     // Iterate using for of loop
     for (const value of Object.values(obj)) {
-      console.log(value);
+        console.log(value);
     }
     // Iterate using for in loop
     for (const [key, value] of Object.entries(obj)) {
-      console.log(`${key}: ${value}`);
+        console.log(`${key}: ${value}`);
     }
-  }
+}
 
-  /**
-   * Iterate the Object
+
+/**
+ * Iterate the Object
 easy
 Time Limit: 2 sec
 Memory Limit: 128000 kB
