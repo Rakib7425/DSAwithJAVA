@@ -5,133 +5,243 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Search the Cards</title>
     <style>
-        header {
+        /* Navigation bar styles */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             background-color: #333;
             color: #fff;
-            padding: 20px;
+            padding: 1rem;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 999;
         }
 
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            /* justify-content: flex-; */
-        }
-
-        nav li {
-            margin: 0 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        nav a {
+        .logo a {
             color: #fff;
+            font-size: 1.5rem;
             text-decoration: none;
         }
 
-        #search-bar {
-            background-color: #dfa5a5;
-            padding: 20px;
-            text-align: center;
+        .nav-links {
+            display: flex;
+
+            align-items: center;
+            width: 18%;
+            list-style: none;
+        }
+
+        .nav-links li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 1rem;
+        }
+
+        .burger {
+            display: none;
+        }
+
+        .burger div {
+            width: 25px;
+            height: 3px;
+            background-color: #fff;
             margin: 5px;
         }
 
-        form {
-            display: inline-flex;
-            max-width: 50%;
-            margin-left: 3px;
+        @media screen and (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .burger {
+                display: block;
+                cursor: pointer;
+            }
         }
 
-        input[type="text"] {
-            padding: 10px;
+        /* Search section styles */
+        .search {
+            height: 60vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url('https://images.unsplash.com/32/Mc8kW4x9Q3aRR3RkP5Im_IMG_4417.jpg?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Z29vZ2xlJTIwc2VhcmNoYm94JTIwYmFja2dyb3VuZCUyMGltYWdlc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .search-container {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 2rem;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        .search-container h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .search-container input[type='text'] {
+            padding: 0.5rem;
+            font-size: 1.2rem;
+            border-radius: 5px;
             border: none;
-            border-radius: 5px 0 0 5px;
-            width: 70%;
+            margin-bottom: 1rem;
+            width: 60%;
         }
 
-        button[type="submit"] {
+        .search-container button {
+            padding: 0.5rem 1.5rem;
+            font-size: 1.2rem;
             background-color: #333;
             color: #fff;
-            padding: 10px;
             border: none;
-            border-radius: 0 5px 5px 0;
-            width: 20%;
+            border-radius: 5px;
             cursor: pointer;
         }
 
-        #cards-section {
+        /* Card section styles */
+        .cards {
             display: flex;
-            justify-content: space-between;
             flex-wrap: wrap;
-            padding: 20px;
+            justify-content: center;
+            margin-top: 5rem;
         }
 
         .card {
-            width: calc(33.33% - 20px);
-            background-color: #f2f2f2;
-            border-radius: 5px;
-            margin-bottom: 20px;
-            padding: 20px;
+            width: 30%;
+            margin: 1rem;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
         }
 
         .card img {
-            max-width: 100%;
-            height: auto;
-            margin-bottom: 10px;
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
         }
 
-        .card h3 {
-            margin-top: 0;
-            font-size: 24px;
+        .card-content {
+            padding: 1rem;
         }
 
-        .card p {
-            margin-bottom:
+        .card-content h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .card-content p {
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+
+            bottom: 0;
+            width: 100%;
+        }
     </style>
 </head>
 
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li>Navbar</li>
-            </ul>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-            </ul>
-        </nav>
-    </header>
-    <section id="search-bar">
-        <form>
-            <input type="text" placeholder="Search...">
-            <button type="submit">Go</button>
-        </form>
-    </section>
-    <section id="cards-section">
-        <div class="card">
-            <img src="image-1.jpg" alt="Image 1">
-            <h3>Card Title 1</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis lacinia nisi.</p>
-            <a href="#">Learn More</a>
+    <!-- Navigation bar -->
+    <nav>
+        <div class="logo">
+            <a href="#">Search the Cards </a>
         </div>
-        <div class="card">
-            <img src="image-2.jpg" alt="Image 2">
-            <h3>Card Title 2</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis lacinia nisi.</p>
-            <a href="#">Learn More</a>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
         </div>
-        <div class="card">
-            <img src="image-3.jpg" alt="Image 3">
-            <h3>Card Title 3</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis lacinia nisi.</p>
-            <a href="#">Learn More</a>
+    </nav>
+
+    <!-- Search section -->
+    <section class="search">
+        <div class="search-container">
+            <h1>Find your next adventure</h1>
+            <input type="text" placeholder="Search..." />
+            <button>Search</button>
         </div>
     </section>
+
+    <!-- Card section -->
+    <section class="cards">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1496715976403-7e36dc43f17b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8Z29vZ2xlJTIwc2VhcmNoYm94JTIwYmFja2dyb3VuZCUyMGltYWdlc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+                alt="" />
+            <div class="card-content">
+                <h2>Card 1</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+                    porttitor ultrices est, vel viverra turpis consequat vel. Donec
+                    dignissim metus nec massa ultrices consequat.
+                </p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1679678691006-3afa56204979?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxzZWFyY2h8OHx8YmFja2dyb3VuZHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+                alt="" />
+            <div class="card-content">
+                <h2>Card 2</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+                    porttitor ultrices est, vel viverra turpis consequat vel. Donec
+                    dignissim metus nec massa ultrices consequat.
+                </p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1492892132812-a00a8b245c45?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGdvb2dsZSUyMHNlYXJjaGJveCUyMGJhY2tncm91bmQlMjBpbWFnZXN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+                alt="" />
+            <div class="card-content">
+                <h2>Card 3</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+                    porttitor ultrices est, vel viverra turpis consequat vel. Donec
+                    dignissim metus nec massa ultrices consequat.
+                </p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1508717272800-9fff97da7e8f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGdvb2dsZSUyMHNlYXJjaGJveCUyMGJhY2tncm91bmQlMjBpbWFnZXN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+                alt="" />
+            <div class="card-content">
+                <h2>Card 4</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+                    porttitor ultrices est, vel viverra turpis consequat vel. Donec
+                    dignissim metus nec massa ultrices consequat.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2023 Search the Cards. All Rights Reserved.</p>
+    </footer>
 
 </body>
 
