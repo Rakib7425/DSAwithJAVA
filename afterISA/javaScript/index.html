@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            /* justify-content: flex-; */
+        }
+
+        nav li {
+            margin: 0 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        #search-bar {
+            background-color: #dfa5a5;
+            padding: 20px;
+            text-align: center;
+            margin: 5px;
+        }
+
+        form {
+            display: inline-flex;
+            max-width: 50%;
+            margin-left: 3px;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            border: none;
+            border-radius: 5px 0 0 5px;
+            width: 70%;
+        }
+
+        button[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 0 5px 5px 0;
+            width: 20%;
+            cursor: pointer;
+        }
+
+        #cards-section {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+
+        .card {
+            width: calc(33.33% - 20px);
+            background-color: #f2f2f2;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            padding: 20px;
+        }
+
+        .card img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .card h3 {
+            margin-top: 0;
+            font-size: 24px;
+        }
+
+        .card p {
+            margin-bottom:
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>Navbar</li>
+            </ul>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="search-bar">
+        <form>
+            <input type="text" placeholder="Search...">
+            <button type="submit">Go</button>
+        </form>
+    </section>
+    <section id="cards-section">
+        <div class="card">
+            <img src="image-1.jpg" alt="Image 1">
+            <h3>Card Title 1</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis lacinia nisi.</p>
+            <a href="#">Learn More</a>
+        </div>
+        <div class="card">
+            <img src="image-2.jpg" alt="Image 2">
+            <h3>Card Title 2</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis lacinia nisi.</p>
+            <a href="#">Learn More</a>
+        </div>
+        <div class="card">
+            <img src="image-3.jpg" alt="Image 3">
+            <h3>Card Title 3</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis lacinia nisi.</p>
+            <a href="#">Learn More</a>
+        </div>
+    </section>
+
+</body>
+
+</html>
