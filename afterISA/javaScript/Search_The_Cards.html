@@ -5,9 +5,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon"
+        href="https://cdn1.iconfinder.com/data/icons/basic-ui-elements-color/700/09_search-1024.png">
     <title>Search the Cards</title>
     <style>
-        /* Navigation bar styles */ 
+        /* CSS Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #333;
+        }
+
+        /* Navigation bar styles */
         nav {
             display: flex;
             justify-content: space-between;
@@ -17,8 +30,10 @@
             padding: 1rem;
             position: fixed;
             top: 0;
-            width: 100%;
+            width: 99vw;
             z-index: 999;
+            border-radius: 15px;
+            box-shadow: 0 4px 4px 0 rgba(25, 231, 231, 0.2);
         }
 
         .logo a {
@@ -29,16 +44,22 @@
 
         .nav-links {
             display: flex;
-
             align-items: center;
-            width: 18%;
             list-style: none;
+            float: right;
+            margin-right: 2rem;
         }
 
         .nav-links li a {
             color: #fff;
             text-decoration: none;
             padding: 1rem;
+        }
+
+        .nav-links li a:hover {
+            transform: translateY(10px);
+            color: rgb(0, 191, 255);
+
         }
 
         .burger {
@@ -65,20 +86,22 @@
 
         /* Search section styles */
         .search {
-            height: 60vh;
+            height: 70vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            background-image: url('https://images.unsplash.com/32/Mc8kW4x9Q3aRR3RkP5Im_IMG_4417.jpg?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Z29vZ2xlJTIwc2VhcmNoYm94JTIwYmFja2dyb3VuZCUyMGltYWdlc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60');
-            background-size: cover;
+            background-image: url('https://www.locklizard.com/wp-content/uploads/2015/02/secure_doc_distribution.png');
+            background-size: contain;
             background-position: center;
+            background-repeat: repeat;
         }
 
         .search-container {
-            background-color: rgba(255, 255, 255, 0.9);
+            background-color: rgba(79, 83, 76, 0.9);
             padding: 2rem;
             text-align: center;
-            border-radius: 5px;
+            border-radius: 8px;
+            color: rgb(255, 255, 255);
         }
 
         .search-container h1 {
@@ -98,7 +121,7 @@
         .search-container button {
             padding: 0.5rem 1.5rem;
             font-size: 1.2rem;
-            background-color: #333;
+            background-color: #211e1e;
             color: #fff;
             border: none;
             border-radius: 5px;
@@ -111,6 +134,7 @@
             flex-wrap: wrap;
             justify-content: center;
             margin-top: 5rem;
+            color: wheat;
         }
 
         .card {
@@ -166,8 +190,8 @@
         <ul class="nav-links">
             <li><a href="#">Home</a></li>
             <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact</a></li>
+            <!-- <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li> -->
         </ul>
         <div class="burger">
             <div class="line1"></div>
@@ -179,8 +203,8 @@
     <!-- Search section -->
     <section class="search">
         <div class="search-container">
-            <h1>Find your next adventure</h1>
-            <input type="text" placeholder="Search..." />
+            <h1>Need to know somthing?</h1>
+            <input type="text" placeholder="Ask me..." />
             <button>Search</button>
         </div>
     </section>
@@ -188,8 +212,8 @@
     <!-- Card section -->
     <section class="cards">
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1496715976403-7e36dc43f17b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8Z29vZ2xlJTIwc2VhcmNoYm94JTIwYmFja2dyb3VuZCUyMGltYWdlc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
-                alt="" />
+            <img src="https://s3-ap-southeast-1.amazonaws.com/assets-powerstores-com/data/org/21513/media/img/source/edit/2138077_edit.jpg"
+                alt="Kuch to gadbadh he dayaa" />
             <div class="card-content">
                 <h2>Card 1</h2>
                 <p>
@@ -200,8 +224,8 @@
             </div>
         </div>
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1679678691006-3afa56204979?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxzZWFyY2h8OHx8YmFja2dyb3VuZHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
-                alt="" />
+            <img src="https://wallpapercave.com/wp/wp2599594.jpg"
+                alt="Kuch to gadbadh he dayaa" />
             <div class="card-content">
                 <h2>Card 2</h2>
                 <p>
@@ -212,8 +236,8 @@
             </div>
         </div>
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1492892132812-a00a8b245c45?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGdvb2dsZSUyMHNlYXJjaGJveCUyMGJhY2tncm91bmQlMjBpbWFnZXN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
-                alt="" />
+            <img src="https://th.bing.com/th/id/R.7f34a70a5bee79488309934920d316cb?rik=IRJI6pSFo6OI%2fQ&riu=http%3a%2f%2fallpicts.in%2fwp-content%2fuploads%2f2018%2f03%2fNatural-Images-HD-1080p-Download-with-Keyhole-Arch-at-Pfeiffer-Beach.jpg&ehk=JPI0MFI04N62Xtd7MT1P2sw4vJgwODLsp1EcpgvuGFo%3d&risl=&pid=ImgRaw&r=0"
+                alt="Kuch to gadbadh he dayaa" />
             <div class="card-content">
                 <h2>Card 3</h2>
                 <p>
@@ -224,10 +248,21 @@
             </div>
         </div>
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1508717272800-9fff97da7e8f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGdvb2dsZSUyMHNlYXJjaGJveCUyMGJhY2tncm91bmQlMjBpbWFnZXN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
-                alt="" />
+            <img src="https://www.phishprotection.com/wp-content/uploads/2020/07/best-phishing-emails.jpg"
+                alt="Kuch to gadbadh he dayaa" />
             <div class="card-content">
                 <h2>Card 4</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+                    porttitor ultrices est, vel viverra turpis consequat vel. Donec
+                    dignissim metus nec massa ultrices consequat.
+                </p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://ai-techpark.com/wp-content/uploads/2021/06/API-1536x864.jpg" alt="Kuch to gadbadh he dayaa" />
+            <div class="card-content">
+                <h2>Card 5</h2>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
                     porttitor ultrices est, vel viverra turpis consequat vel. Donec
@@ -243,6 +278,19 @@
         <p>© 2023 Search the Cards. All Rights Reserved.</p>
     </footer>
 
+    <!-- Script -->
+    <script>
+        // Get the root HTML element
+        const root = document.documentElement;
+
+        // Disable the scrollbar by setting the overflow property to hidden
+        root.style.overflow = 'hidden';
+
+        // Enable the scrollbar by setting the overflow property back to its default value
+        root.style.overflow = 'auto';
+
+
+    </script>
 </body>
 
 </html>
