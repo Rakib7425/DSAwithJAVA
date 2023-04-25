@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Portfolio - Rakib RsM</title>
+</head>
+<!-- <link rel="stylesheet" href="style.css"> -->
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #333;
+        max-width: 80%;
+        margin: auto;
+        /* background-color: #333; */
+    }
+
+    .container {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    header {
+        background-color: #fff;
+        padding: 20px 0;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+        font-size: 36px;
+        margin-bottom: 10px;
+    }
+
+    h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    ul {
+        list-style: none;
+        margin-bottom: 20px;
+    }
+
+    li {
+        margin-bottom: 5px;
+    }
+
+    main {
+        padding: 20px 0;
+        background-color: #f9f9f9;
+    }
+
+    section {
+        padding: 20px;
+        margin-bottom: 20px;
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .work-container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .work-item {
+        flex: 1;
+        padding: 20px;
+        margin: 10px;
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .work-item img {
+        max-width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .work-item h3 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .work-item p {
+        margin-bottom: 10px;
+    }
+
+    .work-item a {
+        display: block;
+        width: 100%;
+        max-width: 200px;
+        margin: 20px auto 0;
+        padding: 10px 20px;
+        border: none;
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        text-decoration: none;
+        float: right;
+    }
+
+    .work-item a:hover {
+        background-color: #555;
+    }
+
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        margin-bottom: 20px;
+    }
+
+    ul li {
+        flex: 1;
+        padding: 10px;
+        margin: 5px;
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    form {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    a {
+        border-radius: 10px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        border: none;
+        background-color: #f2f2f2;
+        margin-bottom: 20px;
+    }
+
+    button[type="submit"] {
+        display: block;
+        width: 100%;
+        max-width: 200px;
+        margin: 20px auto 0;
+        padding: 10px 20px;
+        border: none;
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 10px;
+    }
+
+    button[type="submit"]:hover {
+        background-color: #555;
+    }
+
+    footer {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+    }
+
+    @media screen and (max-width: 768px) {
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header img {
+            margin-bottom: 10px;
+        }
+
+        nav {
+            display: none;
+            margin-bottom: 20px;
+        }
+
+        .menu-icon {
+            display: block;
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        .menu-icon i {
+            font-size: 30px;
+        }
+
+        .menu-showing nav {
+            display: block;
+        }
+
+        .work-item {
+            flex: 1 1 100%;
+        }
+    }
+</style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>Rakibul Islam</h1>
+            <h2>Web Developer</h2>
+            <ul>
+                <li>Email:<a href="mailto:"> irakibul026@gmail.com</a></li>
+
+                <li>Phone:<a href="tel:+91"><br />91019-10265</a></li>
+                <li>Website:<br /> NA</li>
+                <li>Location:<br /> NA</li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <h2>About Me</h2>
+            <p>I am a web developer with 1/4 years of experience in developing responsive and user-friendly websites. I
+                specialize in HTML, CSS, JavaScript, and React, and I am always eager to learn new technologies to
+                improve my skills.</p>
+        </section>
+
+        <section>
+            <h2>My Works</h2>
+            <div class="work-container">
+                <div class="work-item">
+                    <!-- <img src="img/work1.jpg" alt="Work 1"> -->
+                    <h3>Project 1</h3>
+                    <p>Write your HTML,CSS & Js at one place and see live preview.</p>
+                    <a href="https://rakibulrsm.netlify.app/" target="_blank">View Project</a>
+                </div>
+
+                <div class="work-item">
+                    <!-- <img src="img/work2.jpg" alt="Work 2"> -->
+                    <h3>Project 2</h3>
+                    <p>Earn Microsoft Reward From One Place.</p> <br />
+                    <a href="https://rakibmicro.netlify.app/" target="_blank">View Project</a>
+                </div>
+
+                <div class="work-item">
+                    <!-- <img src="img/work3.jpg" alt="Work 3"> -->
+                    <h3>Project 3</h3>
+                    <p>Send WhatsApp Message Without save phone number...</p>
+                    <a href="https://rakibrsm.netlify.app/" target="_blank">View Project</a>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>My Skills</h2>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>React</li>
+                <!-- <li></li> -->
+                <li>Bootstrap, Tailwind</li>
+                <!-- <li>MySQL</li> -->
+            </ul>
+        </section>
+
+        <section>
+            <h2>Contact Me</h2>
+            <form>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Copyright &copy; 2023 Rakib RsM.
+
+        </p>
+    </footer>
+    <script>
+        // const menuIcon = document.querySelector(".menu-icon");
+        // const menuNav = document.querySelector(".menu-nav");
+        // const menuLinks = document.querySelectorAll(".menu-nav a");
+
+        // menuIcon.addEventListener("click", () => {
+        //     menuNav.classList.toggle("menu-showing");
+        // });
+
+        // menuLinks.forEach((link) => {
+        //     link.addEventListener("click", () => {
+        //         menuNav.classList.remove("menu-showing");
+        //     });
+        // });
+
+    </script>
+</body>
+
+</html>
