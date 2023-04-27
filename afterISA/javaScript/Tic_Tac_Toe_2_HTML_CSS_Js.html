@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe 2</title>
+    <style>
+        /* css code goes here */
+
+        .board {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 10px;
+            margin: 20px;
+        }
+
+        button {
+            font-size: 40px;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- html code goes here -->
+    <h1>Tic Tac Toe</h1>
+    <div class="board">
+        <button id="1"></button>
+        <button id="2"></button>
+        <button id="3"></button>
+        <button id="4"></button>
+        <button id="5"></button>
+        <button id="6"></button>
+        <button id="7"></button>
+        <button id="8"></button>
+        <button id="9"></button>
+    </div>
+
+    <script>
+        // javascript code goes here
+        // Initialize the game
+        let currentPlayer = "1";
+        let gameWon = false;
+        let moves = 0;
+        let grid = Array(9).fill("");
+
+        // Get all the buttons
+        const buttons = document.querySelectorAll("button");
+
+        // Add click event listener to all the buttons
+        buttons.forEach((button) => {
+            button.addEventListener("click", handleClick, { once: true });
+        });
+
+        // Handle button click event
+        function handleClick(event) {
+            const button = event.target;
+            const index = button.id - 1;
+            button.textContent = currentPlayer;
+            grid[index] = currentPlayer;
+            moves++;
+
+            // Check if the game is won or drawn
+            gameWon = checkWin();
+            if (gameWon) {
+                endGame(`Congratulations! Player${currentPlayer} wins`);
+            } else if (moves === 9) {
+                endGame("Draw!");
+            } else {
+                // Switch to the other player
+                currentPlayer = currentPlayer === "1" ? "2" : "1";
+                document.querySelector("h1").textContent = `Tic Tac Toe - Player${currentPlayer}'s turn`;
+            }
+        }
+
+        // Check if the game is won
+        function checkWin() {
+            const winCombos = [
+                [0, 1, 2],
+                [3, 4, 5],
+                [6, 7, 8],
+                [0, 3, 6],
+                [1, 4, 7],
+                [2, 5, 8],
+                [0, 4, 8],
+                [2, 4, 6],
+            ];
+            return winCombos.some((combo) => {
+                return combo.every((index) => {
+                    return grid[index] === currentPlayer;
+                });
+            });
+        }
+
+        // End the game
+        function endGame(message) {
+            alert(message);
+            // Disable all the buttons
+            buttons.forEach((button) => {
+                button.removeEventListener("click", handleClick);
+            });
+        }
+    </script>
+</body>
+
+</html>
