@@ -1,3 +1,11 @@
+/**
+ * The function takes in an array of students and returns an array of high performers, where a high
+ * performer is defined as a student with an average score greater than 90.
+ * @param students - an array of objects representing students, where each object has the following
+ * properties:
+ * @returns The function `highPerformers` returns an array of objects containing the name and average
+ * score of students whose average score is greater than 90.
+ */
 function highPerformers(students) {
     return students
         .map(student => ({
