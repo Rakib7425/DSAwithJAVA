@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomeWork 28-04-23</title>
+</head>
+
+<body>
+    <script>
+        // Create a new table element
+        var table = document.createElement('table');
+
+        // Create a header row
+        var headerRow = document.createElement('tr');
+
+        // Add header cells to the header row
+        var headerCell1 = document.createElement('th');
+        headerCell1.textContent = 'Column 1';
+        headerRow.appendChild(headerCell1);
+
+        var headerCell2 = document.createElement('th');
+        headerCell2.textContent = 'Column 2';
+        headerRow.appendChild(headerCell2);
+
+        var headerCell3 = document.createElement('th');
+        headerCell3.textContent = 'Column 3';
+        headerRow.appendChild(headerCell3);
+
+        // Add the header row to the table
+        table.appendChild(headerRow);
+
+        // Create three data rows
+        for (var i = 1; i <= 3; i++) {
+            var dataRow = document.createElement('tr');
+
+            var dataCell1 = document.createElement('td');
+            dataCell1.textContent = 'Row ' + i + ', Column 1';
+            dataRow.appendChild(dataCell1);
+
+            var dataCell2 = document.createElement('td');
+            dataCell2.textContent = 'Row ' + i + ', Column 2';
+            dataRow.appendChild(dataCell2);
+
+            var dataCell3 = document.createElement('td');
+            dataCell3.textContent = 'Row ' + i + ', Column 3';
+            dataRow.appendChild(dataCell3);
+
+            // Add the data row to the table
+            table.appendChild(dataRow);
+        }
+
+        // Add the table to the page
+        document.body.appendChild(table);
+
+    </script>
+</body>
+
+</html>
