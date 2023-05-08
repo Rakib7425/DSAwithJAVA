@@ -1,8 +1,8 @@
-
-function numOfWords() {
+function numOfWords(str) {
     // write code here
     // return the output , do not use console.log here
-    
+    let ans = str.split(' ');
+    return ans.length;
 }
 
 /**

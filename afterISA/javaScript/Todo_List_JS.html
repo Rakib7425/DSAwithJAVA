@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Todo list</title>
+    <style>
+        /* css code goes here */
+        .completed {
+            text-decoration: line-through solid rgb(0, 0, 0);
+        }
+    </style>
+</head>
+<body>
+    <header>My Todo list</header>
+    <form id="todo-form">
+        <div>
+            <input type="text" class="todo-input">
+            <button type="submit" class="todo-button">ADD</button>
+        </div>
+    </form>
+
+    <div class="todo-container">
+        <ul class="todo-list">
+
+        </ul>
+    </div>
+
+
+    <script>
+        // javascript code goes here
+        // Add task to the list
+        function addTask(event) {
+            event.preventDefault();
+            const input = document.querySelector('.todo-input');
+            const taskName = input.value;
+            if (taskName) {
+                const todoList = document.querySelector('.todo-list');
+                const listItem = document.createElement('li');
+                listItem.innerHTML = `
+          <div class="todo-item">${taskName}</div>
+          <button class="complete-btn">Complete</button>
+          <button class="trash-btn">Delete</button>
+        `;
+                todoList.appendChild(listItem);
+                input.value = '';
+            }
+        }
+
+        // Mark a task as completed or incomplete
+        function toggleTaskCompletion(event) {
+            const taskItem = event.target.previousElementSibling;
+            taskItem.classList.toggle('completed');
+        }
+
+        // Delete a task
+        function deleteTask(event) {
+            const listItem = event.target.parentElement;
+            listItem.remove();
+        }
+
+        // Event listeners
+        const todoForm = document.getElementById('todo-form');
+        const todoList = document.querySelector('.todo-list');
+
+        todoForm.addEventListener('submit', addTask);
+        todoList.addEventListener('click', function (event) {
+            if (event.target.classList.contains('complete-btn')) {
+                toggleTaskCompletion(event);
+            }
+            if (event.target.classList.contains('trash-btn')) {
+                deleteTask(event);
+            }
+        });
+    </script>
+</body>
+
+</html>
+<!-- 
+    Todo List - JS
+Make a Todo List in which users can
+
+1. Add a task to the list
+2. Delete a task from the list
+3. Mark a task as completed
+
+1. Add a task to the list: The users will type a task in the text input box and when they click on the ADD button, a div element should get added within the < ul class="todo-list"> </ul>
+Note: Use preventDefault() Event Method to prevent it from submitting a form, since the Add button in HTML is of type submit.
+
+The new div element added within the < ul class="todo-list"> </ul> must contain the following in the given order:
+(a) A list element displaying the name of the task entered by the user in the input box. It should have a class todo-item
+(b) A 'Complete button' with class complete-btn
+(c) A 'Delete button' with class trash-btn
+
+Note: Ensure the order of the above 3 elements are maintained.
+
+
+2. Mark a task as completed: On clicking the completed button, the task name present inside the list element should get strike-through. e.g. make a coffee and on clicking the completed button again the strike-through should be removed. e.g. make a coffee
+Note: Only use the CSS property text-decoration: line-through solid rgb(0, 0, 0); to implement this.
+
+The completed button must have complete-btn as a class and should function as explained, otherwise your test cases will not pass.
+
+3. Delete a task from the list: On clicking the Delete Button, the corresponding component that contains that Delete button should get deleted, and removed from the < ul class="todo-list"> </ul>
+
+The Delete button must have trash-btn as a class and should function as explained above, otherwise your test cases will not pass.
+
+Do not make any changes to the HTML file.
+ -->
