@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Break the Flow</title>
+
+    <style>
+        button {
+            cursor: pointer;
+        }
+
+        div.first-div {
+            margin-top: 40px;
+            height: 250px;
+            width: 250px;
+            background-color: orange;
+        }
+
+        div.second-div {
+            position: relative;
+            left: 180px;
+            height: 150px;
+            width: 150px;
+            background-color: lightgreen;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <label for="name">Username: </label>
+        <input type="text" name="name" id="name" placeholder="Enter your name..." autocomplete="off" /><br />
+        <label for="email">Email: </label>
+        <input type="email" name="email" id="email" placeholder="Enter your email" autocomplete="off" /><br />
+        <label for="message">Message: </label><br />
+        <textarea name="message" id="message" cols="30" rows="10" placeholder="Enter your message..."></textarea><br />
+        <button class="submit-btn" id="submit-btn">Submit</button>
+    </form>
+
+    <div class="first-div">
+        first div
+        <div class="second-div">second div</div>
+    </div>
+    <h3 class="output"></h3>
+
+    <script>
+        const submitBtn = document.getElementById("submit-btn");
+        // write your code here
+        submitBtn.addEventListener("click", (event) => {
+            event.preventDefault(); // Prevent page refresh
+        });
+
+        const firstDiv = document.querySelector(".first-div");
+        const secondDiv = document.querySelector(".second-div");
+        let output = document.querySelector(".output");
+
+        firstDiv.addEventListener("click", () => {
+            output.innerText += "first div called";
+        });
+
+        secondDiv.addEventListener("click", (event) => {
+            event.stopPropagation(); // Stop event bubbling
+            // write your code here
+            output.innerText += "second div called -- ";
+        });
+    </script>
+</body>
+
+</html>
