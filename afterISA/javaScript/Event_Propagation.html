@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Propagation</title>
+    <style>
+        div {
+            padding: 50px;
+            background-color: rgba(49, 35, 197, 0.2);
+            text-align: left;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <a id="myAnchor" href="https://www.newtonschool.co/">Go to Website</a>
+    <br>
+    <p>Click the DIV </p>
+    <div id="div2" onclick="func2()">DIV 2
+        <div id="div1" onclick="func1(event)">DIV 1</div>
+    </div>
+    Stop propagation:
+    <input type="checkbox" id="check">
+</body>
+
+<script>
+    const myAnchor = document.getElementById("myAnchor");
+
+    myAnchor.addEventListener("click", (event) => {
+        event.preventDefault(); // Prevent the default action\
+    });
+
+    function func1(event) {
+        if (document.getElementById("check").checked) {
+            event.stopPropagation(); // Stop event propagation
+
+            console.log("DIV 1 is clicked.");
+        } else {
+            event.preventDefault(); // Prevent default action (navigating to the link)
+            event.stopImmediatePropagation(); // Stop further event propagation
+
+            console.log("DIV 1 is clicked.");
+        }
+    }
+
+    function func2() {
+        console.log("DIV 2 is clicked.");
+    }
+</script>
+
+</html>
+<!-- 
+    Event Propagation
+You are given a boilerplate of HTML CSS and JS code.
+You need to perform two tasks.
+
+When we click the anchor tag it should not take us to the link which is embedded inside it.
+You have to implement this using the preventDefault() method.
+The preventDefault() method cancels the event if it is cancelable, meaning that the default action that belongs to the event will not occur.
+When we click on div with id #div1 it results in triggers an event that prints value in the console.
+As div with id #div1 is inside div with id #div2 when div with id #div1 is clicked, it automatically triggers the event of #div2.
+When the checkbox with id #check is checked and div with id #div1 is clicked only the event associated with that div is triggered.
+
+Before Changes
+ -->
