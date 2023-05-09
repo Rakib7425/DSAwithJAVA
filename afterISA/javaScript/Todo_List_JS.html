@@ -13,6 +13,7 @@
         }
     </style>
 </head>
+
 <body>
     <header>My Todo list</header>
     <form id="todo-form">
@@ -39,10 +40,10 @@
                 const todoList = document.querySelector('.todo-list');
                 const listItem = document.createElement('li');
                 listItem.innerHTML = `
-          <div class="todo-item">${taskName}</div>
-          <button class="complete-btn">Complete</button>
-          <button class="trash-btn">Delete</button>
-        `;
+                    <div class="todo-item">${taskName}</div>
+                    <button class="complete-btn">Complete</button>
+                    <button class="trash-btn">Delete</button>
+                `;
                 todoList.appendChild(listItem);
                 input.value = '';
             }
