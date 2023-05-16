@@ -41,8 +41,6 @@ const vehicle = {
 
 }
 
-
-
 Your task is to complete the two functions -
 1. makeCar() - It accepts two parameters name and wheelCount and returns an object with name, wheelCount, and type properties and inherits from the vehicle object. The type property must be set to "Car" (case-sensitive).
 
@@ -75,6 +73,5 @@ const myBike = makeBike(name, wheelCount)
 // if makeBike is implemented properly and has methods of vehicle
 // myBike object will have a method attached to it , which will print the string below on console
 // Bike named 'Pulsar' is running with 2 wheels!
-
 
  */
