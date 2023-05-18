@@ -38,7 +38,6 @@ const vehicle = {
     // Some more members and methods
 
     ...
-
 }
 
 Your task is to complete the two functions -
