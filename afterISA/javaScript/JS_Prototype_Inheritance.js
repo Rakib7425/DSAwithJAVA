@@ -24,6 +24,8 @@ calculator.divide = function () {
 //  console.log(calculator.product()); // 18
 //  console.log(calculator.divide()); // 2
 
+
+// Give num1 and num2 as 6 and 3 respectively in the input section separated by a comma and then run the code to check the output
 /**
   * JS Prototype Inheritance
 easy
