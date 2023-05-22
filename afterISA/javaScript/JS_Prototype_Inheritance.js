@@ -19,7 +19,7 @@ calculator.divide = function () {
    return this.num1 / this.num2;
 };
 
-//  console.log(calculator.num1); // 6
+// console.log(calculator.num1); // 6
 //  console.log(calculator.subtract()); // 3
 //  console.log(calculator.product()); // 18
 //  console.log(calculator.divide()); // 2
