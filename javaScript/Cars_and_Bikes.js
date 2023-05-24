@@ -29,15 +29,15 @@ You are given an object vehicle which contains some hidden members and methods.
 
 const vehicle = {
 
-    name: "",
+   name: "",
 
-    type: "",
+   type: "",
 
-    wheelCount: "",
+   wheelCount: "",
 
-    // Some more members and methods
+   // Some more members and methods
 
-    ...
+   ...
 }
 
 Your task is to complete the two functions -
