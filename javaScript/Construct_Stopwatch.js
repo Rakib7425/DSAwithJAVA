@@ -1,4 +1,53 @@
+//Create a StopWatch constructor function
+function StopWatch() {
+   //Create a property duration that returns the number of milliseconds passed between start and stop function calls
+   this.duration = 0;
 
+   //Create a private variable startTime that stores the starting time of the clock
+   let startTime;
+
+   //Create a private variable endTime that stores the ending time of the clock
+   let endTime;
+
+   //Create a private variable running that stores whether the clock is running or not
+   let running = false;
+
+   //Create a start function that starts the clock
+   this.start = function () {
+      //If the clock is already running, return "Stopwatch is already running"
+      if (running) {
+         return "Stopwatch is already running";
+      }
+      //Otherwise, set running to true and assign the current time to startTime
+      running = true;
+      startTime = Date.now();
+   };
+
+   //Create a stop function that stops the clock
+   this.stop = function () {
+      //If the clock is not running, return "Stopwatch is not started"
+      if (!running) {
+         return "Stopwatch is not started";
+      }
+      //Otherwise, set running to false and assign the current time to endTime
+      running = false;
+      endTime = Date.now();
+
+      //Update the duration property by adding the difference between endTime and startTime
+      this.duration += endTime - startTime;
+   };
+
+   //Create a reset function that resets the clock
+   this.reset = function () {
+      //Set running to false and assign null to startTime and endTime
+      running = false;
+      startTime = null;
+      endTime = null;
+
+      //Set duration to zero
+      this.duration = 0;
+   };
+}
 
 /****
  * 
