@@ -39,7 +39,6 @@ class Check_Spiral_Sorting {
   }
 }
 /***
- * 
  * Check Spiral Sorting
 asked in interviews by 1 company
 Time Limit: 2 sec

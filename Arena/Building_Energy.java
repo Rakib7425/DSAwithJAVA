@@ -32,7 +32,6 @@ class Building_Energy {
   }
 }
 /**
- * 
  * Building Energy
 Time Limit: 2 sec
 Memory Limit: 128000 kB

@@ -29,8 +29,6 @@ class Birthday_Cake_Candles {
 }
 /**
  * 
- * 
-
  Birthday Cake Candles
 Time Limit: 2 sec
 Memory Limit: 128000 kB
