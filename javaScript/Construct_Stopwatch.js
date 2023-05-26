@@ -58,7 +58,6 @@ easy
 Problem Statement
 Complete the Constructor Function StopWatch that should have the below functionalities
 
-
 Create three functions start, stop, and reset.
 
 Create a property duration, that the constructor function would attach to its object. It should return the number of milliseconds passed between start and stop function calls.
