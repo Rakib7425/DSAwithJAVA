@@ -41,7 +41,7 @@ function Product(name, price, manufacturer) {
 }
 
 /**
- * Product Constructor
+ Product Constructor
 easy
 Time Limit: 2 sec
 Memory Limit: 128000 kB
