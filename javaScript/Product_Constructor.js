@@ -48,7 +48,6 @@ Memory Limit: 128000 kB
 Problem Statement
 Create a Product constructor function which should take three arguments: name, price, and manufacturer. These arguments should be used to set the initial values of the name, price, and manufacturer properties respectively.
 
-
 Add a getProductDetails method that returns the string"Name: {name}, Price: {price}, Manufacturer: {manufacturer}" where {name},{price},{manufacturer} are the corresponding properties of the object
 
 
