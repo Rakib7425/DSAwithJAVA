@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Stop Watch</title>
+</head>
+<!-- html code goes here -->
+
+<body>
+   <div class="stopwatch">00:00:00</div>
+   <button id="startBtn">Start</button>
+   <button id="pauseBtn" disabled>Pause</button>
+   <button id="stopBtn" disabled>Stop</button>
+
+
+   <script>
+      // javascript code goes here
+      let startTime;
+      let stopwatchInterval;
+
+      const stopwatchElement = document.querySelector('.stopwatch');
+      const startButton = document.getElementById('startBtn');
+      const pauseButton = document.getElementById('pauseBtn');
+      const stopButton = document.getElementById('stopBtn');
+
+      startButton.addEventListener('click', startStopwatch);
+      pauseButton.addEventListener('click', pauseStopwatch);
+      stopButton.addEventListener('click', stopStopwatch);
+
+      function startStopwatch() {
+         startTime = Date.now();
+         startButton.disabled = true;
+         pauseButton.disabled = false;
+         stopButton.disabled = false;
+         stopwatchInterval = setInterval(updateStopwatch, 1000);
+      }
+
+      function updateStopwatch() {
+         const elapsedTime = Date.now() - startTime;
+         const formattedTime = formatTime(elapsedTime);
+         stopwatchElement.textContent = formattedTime;
+      }
+
+      function formatTime(time) {
+         const hours = Math.floor(time / (1000 * 60 * 60)).toString().padStart(2, '0');
+         const minutes = Math.floor((time / (1000 * 60)) % 60).toString().padStart(2, '0');
+         const seconds = Math.floor((time / 1000) % 60).toString().padStart(2, '0');
+         return `${hours}:${minutes}:${seconds}`;
+      }
+
+      function pauseStopwatch() {
+         if (pauseButton.textContent === 'Pause') {
+            clearInterval(stopwatchInterval);
+            pauseButton.textContent = 'Continue';
+         } else {
+            startTime = Date.now() - (parseInt(stopwatchElement.textContent.split(':')[2]) * 1000);
+            pauseButton.textContent = 'Pause';
+            stopwatchInterval = setInterval(updateStopwatch, 1000);
+         }
+      }
+
+      function stopStopwatch() {
+         clearInterval(stopwatchInterval);
+         stopwatchElement.textContent = '00:00:00';
+         startButton.disabled = false;
+         pauseButton.disabled = true;
+         stopButton.disabled = true;
+         pauseButton.textContent = 'Pause';
+      }
+   </script>
+
+</body>
+
+</html>
