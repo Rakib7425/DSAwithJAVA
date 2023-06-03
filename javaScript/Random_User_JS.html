@@ -1,0 +1,89 @@
+<!-- html code goes here -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Random User App</title>
+    <style>
+        /* css code goes here */
+        .info {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Random User App</h1>
+
+    <div id="user">
+        <img id="user-image" src="" alt="User Image">
+        <h2 id="user-name"></h2>
+    </div>
+
+    <div id="additional-info">
+        <h3>Additional Info</h3>
+        <div class="info" id="age-info"></div>
+        <div class="info" id="email-info"></div>
+        <div class="info" id="phone-info"></div>
+    </div>
+
+    <button class="info-button" data-attr="age">Age</button>
+    <button class="info-button" data-attr="email">Email</button>
+    <button class="info-button" data-attr="phone">Phone</button>
+    <button id="getUser">Next User</button>
+
+
+    <script>
+        const userImage = document.getElementById('user-image');
+        const userName = document.getElementById('user-name');
+        const ageInfo = document.getElementById('age-info');
+        const emailInfo = document.getElementById('email-info');
+        const phoneInfo = document.getElementById('phone-info');
+        const getUserButton = document.getElementById('getUser');
+        const infoButtons = document.querySelectorAll('.info-button');
+        let user;
+
+        // Function to fetch a random user from the API
+        async function getRandomUser() {
+            const response = await fetch('https://randomuser.me/api/');
+            const data = await response.json();
+            user = data.results[0];
+
+            userImage.src = user.picture.large;
+            userName.textContent = `${user.name.first} ${user.name.last}`;
+            ageInfo.textContent = '';
+            emailInfo.textContent = '';
+            phoneInfo.textContent = '';
+        }
+
+        // Function to display the corresponding info when an info button is clicked
+        function displayInfo(event) {
+            const infoType = event.target.dataset.attr;
+
+            ageInfo.textContent = '';
+            emailInfo.textContent = '';
+            phoneInfo.textContent = '';
+
+            if (infoType === 'age') {
+                ageInfo.textContent = `Age: ${user.dob.age}`;
+            } else if (infoType === 'email') {
+                emailInfo.textContent = `Email: ${user.email}`;
+            } else if (infoType === 'phone') {
+                phoneInfo.textContent = `Phone: ${user.phone}`;
+            }
+        }
+
+        // Attach event listeners to the info buttons
+        infoButtons.forEach(button => {
+            button.addEventListener('click', displayInfo);
+        });
+
+        // Attach event listener to the "Get Random User" button
+        getUserButton.addEventListener('click', getRandomUser);
+
+        // Call the getRandomUser function initially to display a random user
+        getRandomUser();
+    </script>
+</body>
+
+</html>
