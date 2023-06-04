@@ -6,23 +6,22 @@ import java.util.*; // contains Collections framework
 // don't change the name of this class
 // you can add inner classes if needed
 class Find_the_Sum {
-    public static void main (String[] args) {
-        try (// Your code here
-        Scanner sc = new Scanner(System.in)) {
-            int k = sc.nextInt();
 
-            long sum = 0;
-            for(int i = 1; i <= k; i++){
-                if(i%2==0 || i%3==0 || i%7==0){
-                    sum += i;
-                }
-            }
-            System.out.print(sum);
+  public static void main(String[] args) {
+    // Your code here
+    try (Scanner sc = new Scanner(System.in)) {
+      int k = sc.nextInt();
+
+      long sum = 0;
+      for (int i = 1; i <= k; i++) {
+        if (i % 2 == 0 || i % 3 == 0 || i % 7 == 0) {
+          sum += i;
         }
+      }
+      System.out.print(sum);
     }
+  }
 }
-
-
 /**
  * Find the Sum (Contest)
 easy
