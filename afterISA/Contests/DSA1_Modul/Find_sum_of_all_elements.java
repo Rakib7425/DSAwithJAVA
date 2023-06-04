@@ -6,34 +6,34 @@ import java.util.*; // contains Collections framework
 // don't change the name of this class
 // you can add inner classes if needed
 class Find_sum_of_all_elements {
-    public static void calculateSum(int[][] arr) {
-        int sum = 0;
-        for (int[] row : arr) {
-            for (int num : row) {
-                sum += num;
-            }
-        }
-        // return sum;
-        System.out.println(sum);
-    }
 
-    public static void main (String[] args) {
-        // Your code here
-        try(Scanner sc = new Scanner(System.in)){
-            int row = sc.nextInt();
-            int col = sc.nextInt();
-            int arr [][] = new int[row][col];
-
-            for(int i=0; i<row; i++){
-                for(int j=0; j<col; j++){
-                    arr[i][j] = sc.nextInt();
-                }
-            }
-            calculateSum(arr);
-        }
+  public static void calculateSum(int[][] arr) {
+    int sum = 0;
+    for (int[] row : arr) {
+      for (int num : row) {
+        sum += num;
+      }
     }
+    // return sum;
+    System.out.println(sum);
+  }
+
+  public static void main(String[] args) {
+    // Your code here
+    try (Scanner sc = new Scanner(System.in)) {
+      int row = sc.nextInt();
+      int col = sc.nextInt();
+      int arr[][] = new int[row][col];
+
+      for (int i = 0; i < row; i++) {
+        for (int j = 0; j < col; j++) {
+          arr[i][j] = sc.nextInt();
+        }
+      }
+      calculateSum(arr);
+    }
+  }
 }
-
 /**
  * Find sum of all elements (Contest)
 easy
