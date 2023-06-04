@@ -1,4 +1,4 @@
-package DSA1_Modul;
+// package DSA1_Modul;
 
 // import java.io.*; // for handling input/output
 import java.util.*; // contains Collections framework
