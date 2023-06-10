@@ -3,6 +3,7 @@ class Account {
     /*
       Write the remaining part of the class
     */
+   
     constructor(accountName, balance) {
         this.accountName = accountName;
         this.balance = balance;
