@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Github Issues JS</title>
+</head>
+
+<body>
+    <!-- <h4 id="page_indicator"></h4>
+<ol id="issue_container"></ol> -->
+
+    <h1>GitHub Issues</h1>
+
+    <div id="page_indicator">Page number 1</div>
+    <ol id="issue_container"></ol>
+
+    <button id="load_prev">Load Previous</button>
+    <button id="load_next">Load Next</button>
+
+
+    <!-- JS Part -->
+    <script>
+        const loadPrevButton = document.getElementById('load_prev');
+        const loadNextButton = document.getElementById('load_next');
+        const issueContainer = document.getElementById('issue_container');
+        const pageIndicator = document.getElementById('page_indicator');
+        let currentPage = 1;
+
+        // Function to fetch and display issues for a specific page
+        async function fetchIssues(pageNumber) {
+            const response = await fetch(`https://api.github.com/repositories/1296269/issues?page=${pageNumber}&per_page=5`);
+            const data = await response.json();
+            const issues = data.map(issue => issue.title);
+
+            issueContainer.innerHTML = '';
+
+            for (const issue of issues) {
+                const listItem = document.createElement('li');
+                listItem.textContent = issue;
+                issueContainer.appendChild(listItem);
+            }
+
+            pageIndicator.textContent = `Page number ${pageNumber}`;
+            currentPage = pageNumber;
+
+            // Disable/enable buttons based on the current page
+            loadPrevButton.disabled = currentPage === 1;
+            loadNextButton.disabled = issues.length === 0;
+        }
+
+        // Event listener for the "Load Previous" button
+        loadPrevButton.addEventListener('click', () => {
+            if (currentPage > 1) {
+                fetchIssues(currentPage - 1);
+            }
+        });
+
+        // Event listener for the "Load Next" button
+        loadNextButton.addEventListener('click', () => {
+            fetchIssues(currentPage + 1);
+        });
+
+        // Fetch and display the initial issues on page load
+        fetchIssues(1);
+    </script>
+</body>
+
+</html>
