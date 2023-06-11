@@ -1,0 +1,79 @@
+<!-- HTML -->
+<div class="container">
+    <h1>Rectangle Area Calculator</h1>
+    <form id="rectangleForm">
+        <label for="length">Length:</label>
+        <input type="number" id="lengthInput" required />
+        <label for="width">Width:</label>
+        <input type="number" id="widthInput" required />
+        <button type="submit">Calculate</button>
+    </form>
+</div>
+
+<!-- CSS -->
+<style>
+    .container {
+        text-align: center;
+        margin-top: 100px;
+    }
+
+    h1 {
+        color: #333;
+    }
+
+    form {
+        margin-top: 20px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    input {
+        width: 200px;
+        padding: 5px;
+        margin-bottom: 10px;
+    }
+
+    button {
+        padding: 10px 20px;
+        background-color: #333;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+    }
+</style>
+
+<!-- JavaScript -->
+
+<script>
+    // javascript code goes here
+
+    document.getElementById('rectangleForm').addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        const length = parseFloat(document.getElementById('lengthInput').value);
+        const width = parseFloat(document.getElementById('widthInput').value);
+
+        const area = length * width;
+
+        alert("The area of the rectangle is: " + area);
+        // document.write("The area of the rectangle is: "+ area);
+        // document.write(area);
+    }); 
+</script>
+
+
+
+
+<!-- ?Alert Area
+Let's calculate the area of a rectangle and give it to the user as a browser Alert. Given - Two input fields:
+input(id: lengthInput). This will input the length.
+input(id: widthInput). This will input the width.
+Calculate the area and display the following text as a browser alert.
+"The area of the rectangle is: {area}"
+Do NOT print the quotes.
+In place of {area} print the calculated area.
+Eg. Width: 4, Length: 6
+Browser Alert: The area of the rectangle is: 24 -->
