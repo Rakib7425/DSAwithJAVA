@@ -1,0 +1,40 @@
+<!-- HTML -->
+<!-- html code goes here -->
+<div class="container">
+    <h1>Toggle Visibility</h1>
+
+    <button id="toggleBtn">Toggle Element Visibility</button>
+
+    <div class="hidden" id="content">
+        <p>This element will be toggled.</p>
+    </div>
+
+</div>
+
+<!-- CSS -->
+<style>
+    .container {
+        text-align: center;
+        margin-top: 100px;
+    }
+
+    h1 {
+        color: #333;
+    }
+
+    .hidden {
+        display: none;
+    }
+</style>
+
+<!-- JavaScript -->
+<script>
+    // javascript code goes here
+
+    const tglBtn = document.getElementById('toggleBtn');
+    const content = document.getElementById('content');
+
+    tglBtn.addEventListener('click', () => {
+        content.classList.toggle('hidden');
+    })
+</script>
