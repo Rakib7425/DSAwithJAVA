@@ -1,0 +1,88 @@
+<!-- HTML -->
+<div class="grid">
+    <div class="circle" id="1"></div>
+    <div class="circle" id="2"></div>
+    <div class="circle" id="3"></div>
+    <div class="circle" id="4"></div>
+    <div class="circle" id="5"></div>
+    <div class="circle" id="6"></div>
+    <div class="circle" id="7"></div>
+    <div class="circle" id="8"></div>
+    <div class="circle" id="9"></div>
+</div>
+
+<!-- CSS -->
+<style>
+    body {
+        /*Add background image here*/
+        background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/455884/cat.jpg');
+
+        background-size: cover;
+        margin: 0;
+        padding: 0;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        margin: 50px auto;
+        width: 500px;
+        height: 500px;
+    }
+
+    .circle {
+        display: block;
+        width: 100px;
+        height: 100px;
+        /*Add the remaining CSS here*/
+        background-color: blue;
+        border-radius: 50%;
+        transition: background-color 0.3s;
+    }
+
+    /* .circle:hover{
+  background-color: transparent;
+} */
+</style>
+
+
+<!-- JavaScript -->
+<script>
+    // javascript code goes here
+    const circles = document.querySelectorAll('.circle');
+
+    circles.forEach((circle) => {
+        circle.addEventListener('mouseover', () => {
+            circle.style.backgroundColor = 'transparent';
+        });
+
+        circle.addEventListener('mouseout', () => {
+            // circle.style.backgroundColor = 'transparent';
+            circle.style.backgroundColor = 'blue';
+        });
+    });
+
+    const changeColor = () => {
+        circles.forEach((circle) => {
+            circle.style.backgroundColor = 'red'
+        });
+    }
+    document.addEventListener('click', changeColor);
+</script>
+
+<!-- Hover and Click Magic
+We will try to use the hover property of CSS and perform some Magic. We have the following HTML structure:
+A div with class = grid
+Inside the grid div, there are 9 divs with class = circle and ids as 1, 2, 3.. till 9 respectively.
+We have to add the following functionality:
+Initially all the circle divs should have a background color blue.
+The background- color of the circle divs should change whenever we click anywhere on the screen. You can change to any color.
+The circle divs should have a background color as transparent on hover. Note: Do NOT use CSS :hover. Use javascript for this functionality.
+Hint: You can user mouseover and mouseout event listener to implement this.
+Add the following properties in CSS:
+Apply a background image to the body. Use image URL https://s3- us- west-2. amazonaws. com/s. cdpn. io/455884/cat. jpg
+The image should cover the entire background.
+Make the border- radius as 50%.
+background color should be "blue" Initially.
+Demo Video - This is how the website should work after solving -->
