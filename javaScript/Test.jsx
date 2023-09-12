@@ -2,7 +2,7 @@ import React from 'react'
 
 const Test = () => {
   const sayHello = () => {
-    console.log("Hahahhaaha I DID IT");
+    console.log("Hahahhaaha I DID IT, but not saying HELLO AHAHA");
   }
   return (
     <>
