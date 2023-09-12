@@ -1,0 +1,129 @@
+<!-- html code goes here -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <title>Asian Paints Wall Color Preview</title>
+    <style>
+        .block {
+            height: 50px;
+            width: 50px;
+            margin: 5px;
+            border: 1px solid black;
+        }
+
+        .blocks-wall {
+            display: grid;
+            grid-template-columns: repeat(4, 70px);
+            gap: 10px;
+        }
+
+
+        button {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Asian Paints Wall Color Preview</h1>
+    <div>
+        <label for="wall_id">Wall ID:</label>
+        <input type="number" id="wall_id" min="1" max="10">
+    </div>
+    <div>
+        <label for="wall_color">Wall Color:</label>
+        <input type="text" id="wall_color">
+    </div>
+    <button id="apply-btn">Apply</button>
+    <button id="reset-btn">Reset</button>
+
+    <section class="blocks-wall">
+        <!-- Create 10 walls with unique IDs -->
+        <div id="1" class="block" value='1'></div>
+        <div id="2" class="block" value='2'></div>
+        <div id="3" class="block" value='3'></div>
+        <div id="4" class="block" value='4'></div>
+        <div id="5" class="block" value='5'></div>
+        <div id="6" class="block" value='6'></div>
+        <div id="7" class="block" value='7'></div>
+        <div id="8" class="block" value='8'></div>
+        <div id="9" class="block" value='9'></div>
+        <div id="10" class="block" value='10'></div>
+    </section>
+
+    <!-- <script src="script.js"></script> -->
+
+    <script>
+        const wallIdInput = document.getElementById('wall_id');
+        const wallColorInput = document.getElementById('wall_color');
+        const applyBtn = document.getElementById('apply-btn');
+        const resetBtn = document.getElementById('reset-btn');
+        const blocks = document.querySelectorAll('.block');
+
+        // Event listener for Apply button
+        applyBtn.addEventListener('click', function () {
+            const wallId = wallIdInput.value;
+            const wallColor = wallColorInput.value;
+
+            if (wallId >= 1 && wallId <= 10) {
+                // Apply color to the specified wall
+                const selectedWall = document.getElementById(wallId);
+                selectedWall.style.backgroundColor = wallColor;
+            } else {
+                alert('Invalid wall ID. Please enter a number between 1 and 10.');
+            }
+
+            // Clear input fields after applying color
+            wallIdInput.value = '';
+            wallColorInput.value = '';
+        });
+
+        // Event listener for Reset button
+        resetBtn.addEventListener('click', function () {
+            // Reset background color of all walls
+            blocks.forEach(block => {
+                block.style.backgroundColor = 'transparent';
+            });
+
+            // Clear input fields
+            wallIdInput.value = '';
+            wallColorInput.value = '';
+        });
+    </script>
+</body>
+
+</html>
+
+<!-- 
+    Asian Paints
+Asian Paints wants the users to be able to preview and compare how different colors will look on their walls. They also decided that limiting it to 10 walls is the best bet not to confuse the users and still give them ample colors and shades to compare.
+
+You are a developer at Asian Paints and have decided to build a feature for this.
+
+You designed the feature in such a way that users will be able to see 10 walls on their screen. There will be 2 input boxes and 2 buttons.
+
+Each wall will have an id associated with it. The first input box will take the id of the wall. The second input box will take the color from the users. The Apply button will apply the color to the wall with the same id in the input field. The Reset button will reset the color of the walls to transparent.
+
+Acceptance Criteria:
+Create 10 walls, 2 input fields, and 2 buttons.
+
+Each block should have a unique id corresponding to it in 1-10 and the same value. For example, the first wall will have <div id="1" value="1"></div>. Give every block a class of "block" as well. These 10 blocks should reside in a section with class "blocks-wall", and give this section, with class "blocks-wall", a grid display, with grid-template-columns repeating 4 times with 70px of width.
+
+The first input box that accepts the id of the wall should have id="wall_id" and should be of type "number".
+
+The first input box that accepts the color of the wall should have id="wall_color" and should be of type "text".
+
+The Apply button should have id="apply-btn".
+
+The Reset button should have id="reset-btn".
+
+If Apply button is pressed, take the color from the input#wall_color and the wall from the input#wall_id and set the color as the background color of the wall. The background color for all other walls should turn transparent.
+
+On entering the new color in the input#wall_color and the wall in the input#wall_id, set the color as the background color of that block, and persist the color and the block of the previous color input and block.
+
+If the Reset button is pressed, the background color for all the blocks should turn transparent.
+ -->
